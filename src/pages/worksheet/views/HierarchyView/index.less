@@ -1,0 +1,104 @@
+body {
+  background-color: #f5f5f9;
+}
+ul {
+  margin-bottom: 0;
+}
+.structureViewWrap {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  padding-top: 10px;
+  background-color: #f5f5f5;
+  ::-webkit-scrollbar {
+    height: 14px;
+  }
+  .hierarchyViewLeftBoundary {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 35px;
+    bottom: 130px;
+    left: 0;
+    width: 40px;
+    z-index: 9;
+    &:hover {
+      .iconWrap {
+        visibility: visible;
+      }
+    }
+
+    &.isOver {
+      border-right: 3px solid #1677ff;
+    }
+  }
+  .hierarchyViewWrap {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 60px;
+  }
+}
+.recordItemWrap {
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
+  transition: box-shadow 0.2s ease-out;
+  &.normalOver {
+    box-shadow: 0 0 0 3px #1677ff;
+  }
+  &.directParentOver {
+    box-shadow: 0 0 0 3px #eee;
+  }
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+    .addHierarchyRecord {
+      visibility: visible;
+    }
+  }
+  .dragDropRecordWrap {
+    max-width: 280px;
+    min-width: 280px;
+    background-color: #fff;
+    margin-bottom: 8px;
+    border-radius: 3px;
+    &.highLight {
+      border: 3px solid #ff9300;
+    }
+  }
+  .skeletonBox {
+    padding: 10px 14px;
+  }
+}
+.sortableTreeNodeWrap {
+  position: relative;
+  .svgWrap {
+    position: absolute;
+    top: 0;
+    width: 120px;
+    left: -120px;
+    height: 100%;
+  }
+  .svgStraightWrap {
+    position: absolute;
+    top: 0;
+    width: 100px;
+    left: -100px;
+    height: 100%;
+  }
+}
+.sortableVerticalTreeNodeWrap {
+  .verticalSvgWrap {
+    position: absolute;
+    top: -40px;
+    height: 40px;
+    left: 0;
+    width: 100%;
+  }
+}
+.mobileSearchRecordDropdown {
+  left: 0 !important;
+}
+.singleViewSearchRecordDropdown {
+  left: 20px !important;
+  margin-top: 20px;
+}

@@ -1,0 +1,61 @@
+.chartStyle,
+.chartAdvanced {
+  .ant-checkbox-input,
+  .ant-radio-input {
+    position: absolute;
+  }
+  .chartCollapse {
+    .ant-collapse-header {
+      font-size: 13px;
+      font-weight: bold;
+      color: #151515 !important;
+      padding: 16px 10px;
+    }
+    .ant-collapse-item {
+      border-bottom: 1px solid #d9d9d9;
+      .ant-collapse-content-box {
+        padding: 0 0 0 34px !important;
+      }
+      .ant-collapse-content-box,
+      .ant-checkbox-wrapper,
+      .ant-select .ant-select-selection-item,
+      .ant-input {
+        font-size: 13px !important;
+      }
+    }
+    .ant-collapse-arrow {
+      transition: transform 0.24s;
+      position: static !important;
+      line-height: initial !important;
+      padding: 0 !important;
+      transform: none !important;
+      &::before {
+        display: initial !important;
+      }
+      &.icon-arrow-active {
+        transform: rotate(-180deg) !important;
+      }
+    }
+    .collapsible .ant-collapse-content-box {
+      filter: opacity(0.5);
+      pointer-events: none;
+    }
+    .hideArrowIcon .icon-arrow-down-border {
+      visibility: hidden;
+    }
+    .yAxisCollapsible .ant-collapse-content-box {
+      > * {
+        filter: opacity(0.5);
+        pointer-events: none;
+      }
+      .minWrapper,
+      .maxWrapper {
+        filter: none;
+        pointer-events: auto;
+      }
+    }
+    .pivotTableFieldColorPanel .ant-collapse-content-box {
+      padding-right: 0;
+    }
+  }
+}

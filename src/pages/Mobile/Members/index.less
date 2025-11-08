@@ -1,0 +1,84 @@
+.memberListMobile {
+  background-color: #f5f5f5;
+
+  .memberListCon {
+    background-color: #f5f5f5;
+    overflow: auto;
+    .moreAction {
+      text-align: right;
+      margin-right: -5px;
+    }
+    .pendingApply {
+      font-weight: 500;
+    }
+    .isMyRole {
+      width: 4px;
+      height: 10px;
+      background: #1677ff;
+      border-radius: 2px;
+      position: absolute;
+      left: 4px;
+      top: 23px;
+    }
+
+    .iconBG {
+      width: 26px !important;
+      height: 26px !important;
+      border-radius: 50%;
+      background: #eaeaea;
+      text-align: center;
+      line-height: 26px;
+      border: 1px solid #fff;
+      display: inline-block;
+      margin-left: -10px;
+      vertical-align: top;
+    }
+    .roleTypeTitle {
+      font-size: 14px;
+      color: #757575;
+      padding: 24px 0 5px 14px;
+    }
+  }
+
+  .adm-card {
+    border-radius: 0;
+  }
+  .am-card,
+  .am-card-body {
+    min-height: auto;
+  }
+  .am-card-body {
+    padding: 15px;
+  }
+
+  .am-card:not(.am-card-full) {
+    border-radius: 0;
+    padding-bottom: 0;
+  }
+
+  .am-card-body::before,
+  .am-card:not(.am-card-full)::before {
+    border: 0 !important;
+    background-color: rgba(0, 0, 0, 0) !important;
+  }
+}
+
+.mobileMembers {
+  input {
+    color: #151515;
+  }
+  .am-modal-header {
+    padding: 6px 15px 10px;
+  }
+  .am-modal-button {
+    font-size: 16px;
+    height: 44px;
+    line-height: 44px;
+    &:first-child {
+      color: #108ee9;
+    }
+    &:last-child {
+      color: red;
+    }
+  }
+}

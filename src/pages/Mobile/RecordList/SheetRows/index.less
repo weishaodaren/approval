@@ -1,0 +1,58 @@
+.sheetRowsWrapper {
+  background-color: #f2f2f3;
+  .am-list {
+    width: 100%;
+  }
+  .am-list-header {
+    padding: 5px;
+  }
+  .am-list-body {
+    background-color: transparent;
+    border: none !important;
+    &:before,
+    &:after {
+      content: none !important;
+    }
+  }
+  .am-list-footer {
+    padding: 0;
+  }
+  .sheetRow {
+    .controlName {
+      color: #9e9e9e;
+    }
+    .controlValue {
+      color: #616161;
+    }
+  }
+  .rowWrap {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    .count {
+      font-size: 0.9em;
+    }
+  }
+}
+
+.withoutRows {
+  width: 100%;
+  height: 100%;
+  color: #bdbdbd;
+  .img {
+    width: 70px;
+  }
+  .text {
+    font-size: 18px;
+  }
+  .icon {
+    font-size: 110px;
+    color: #bdbdbd54;
+  }
+  .adm-pull-to-refresh-content {
+    height: 100%;
+    .withoutRowsContent {
+      height: 100%;
+    }
+  }
+}

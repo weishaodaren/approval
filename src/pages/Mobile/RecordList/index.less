@@ -1,0 +1,66 @@
+@import url('../Discuss/index.less');
+
+.mobileView {
+  background-color: #f2f2f3;
+  min-height: 0;
+}
+
+.viewTabs {
+  --active-line-height: 3px;
+  color: #757575;
+  background-color: #fff;
+  height: 42px;
+  &.isPortal {
+    margin-top: -10px;
+  }
+}
+.addRecordBtn {
+  height: 44px;
+  line-height: 44px;
+  display: flex !important;
+  border-radius: 24px !important;
+  padding: 0px 15px !important;
+  margin: 0 auto;
+  box-shadow: 0 1px 4px #00000029;
+}
+
+.mobileSearchRecordDropdown {
+  width: 100%;
+  top: 44px !important;
+  .searchRecordAutoComplete {
+    box-shadow: unset;
+  }
+  .Dropdown--input {
+    padding: 0 0 0 11px;
+  }
+}
+.singleViewSearchRecordDropdown {
+  .searchRecordAutoComplete {
+    box-shadow: unset;
+  }
+  .Dropdown--input {
+    padding: 0 0 0 11px;
+  }
+}
+
+.batchOptBar {
+  justify-content: space-between;
+  height: 42px;
+  line-height: 42px;
+  padding: 0 15px;
+  background-color: #fff;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+}
+
+.recordActionWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  right: 20px;
+  bottom: 20;
+  z-index: 100;
+  padding-bottom: calc(~'constant(safe-area-inset-bottom) - 20px');
+  padding-bottom: calc(~'env(safe-area-inset-bottom) - 20px');
+}

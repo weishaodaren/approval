@@ -1,0 +1,318 @@
+html,
+body,
+#container {
+  height: 100%;
+}
+
+.publicWorksheet {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow-wrap: break-word;
+  .qrIcon {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background-color: #fff;
+    font-size: 30px;
+    border-radius: 2px;
+
+    > div {
+      position: absolute;
+      left: -60px;
+      top: 56px;
+      display: none;
+    }
+
+    &:hover {
+      &.icon {
+        color: #1677ff;
+      }
+
+      > div {
+        display: inline-block;
+      }
+    }
+  }
+
+  .formContent {
+    position: relative;
+    width: 800px;
+    margin: 200px auto 5px;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 0px 1px 4px #00000029;
+
+    .infoCon {
+      padding: 32px 32px 0px 32px;
+    }
+    .worksheetName {
+      white-space: break-spaces;
+      line-height: 1em;
+      font-size: 32px;
+      font-weight: 600;
+      margin: 32px 0 20px;
+    }
+
+    .worksheetLimitInfo {
+      margin-bottom: 20px;
+      border-left: 5px solid rgba(33, 150, 243, 0.3);
+      .itemInfo {
+        height: 22px;
+        margin-left: 8px;
+        color: #757575;
+        span {
+          font-size: 13px;
+          font-weight: bold;
+          line-height: 22px;
+        }
+      }
+    }
+
+    .worksheetDescription {
+      color: #151515;
+      white-space: pre-line;
+      width: 100%;
+      box-sizing: border-box;
+      overflow: auto;
+      margin-bottom: 16px;
+
+      ol,
+      ul {
+        list-style-position: outside;
+        list-style: decimal;
+        margin-left: 16px;
+      }
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .submitCon {
+    text-align: center;
+    margin: 30px 32px;
+    .submitBtn {
+      max-width: 736px;
+      span {
+        padding: 0 32px;
+      }
+      :hover {
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 3px;
+      }
+    }
+  }
+
+  .mingdaoCon {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.6);
+    margin: 0 auto;
+    width: 800px;
+    padding: 10px 32px 12px;
+
+    a {
+      color: #000;
+      text-decoration: none;
+
+      &:hover {
+        color: #1677ff;
+      }
+    }
+  }
+
+  &.hideBg {
+    .formContent {
+      width: 100% !important;
+      margin: 0;
+      border-radius: 0;
+      box-shadow: none;
+    }
+    .mingdaoCon {
+      width: 100% !important;
+    }
+  }
+}
+
+.fillWorksheetSection {
+  display: flex;
+  margin-left: -19px;
+  &.isFixedRight {
+    margin-left: 0;
+    flex-direction: row-reverse;
+    .relateRecordBlockCon {
+      padding-left: 0 !important;
+      padding-right: 24px;
+    }
+  }
+  & > .customFieldsContainer {
+    margin: 0 !important;
+  }
+  .relateRecordBlockCon {
+    flex: 1;
+    min-width: 0;
+    padding-left: 24px;
+  }
+}
+
+.preFillDescDialog {
+  > .mui-dialog-mask {
+    background-color: rgba(0, 0, 0, 0.85) !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .formContent {
+    width: 1100px !important;
+  }
+  .mingdaoCon {
+    width: 1100px !important;
+  }
+}
+
+@media (max-width: 920px) {
+  .bgHeader {
+    height: 180px !important;
+  }
+
+  .publicWorksheet {
+    .infoCon {
+      padding: 24px 24px 0px 24px !important;
+    }
+    .formMain {
+      padding: 0 24px !important;
+    }
+
+    .logo {
+      max-width: 100%;
+      height: auto !important;
+      max-height: 40px;
+    }
+
+    .formContent {
+      width: auto;
+      margin: 100px 10px 5px;
+
+      .qrIcon {
+        display: none;
+      }
+
+      .receipt {
+        padding: 0 24px;
+      }
+      .submitCon {
+        margin: 30px 24px;
+      }
+    }
+
+    .mingdaoCon {
+      text-align: center;
+      width: auto;
+      margin-left: 10px;
+      margin-right: 10px;
+      padding: 12px 0 20px;
+
+      .Right {
+        display: block;
+        float: none !important;
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+.filledRecordDialog {
+  .mui-dialog-default-title {
+    font-weight: 600;
+  }
+  .mui-dialog-body {
+    background: #f8f8f8;
+    padding: 0px !important;
+  }
+  .recordItem {
+    display: flex;
+    flex-direction: column;
+    min-height: 82px;
+    padding: 16px 12px;
+    margin: 10px;
+    background: #fff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16);
+    border-radius: 3px;
+    cursor: pointer;
+    &:hover {
+      background: #fcfcfc;
+    }
+
+    .recordFooter {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      .statusWrapper {
+        margin-left: 36px;
+        .Success {
+          color: #4caf50;
+        }
+        .Warning {
+          color: #ff9d00;
+        }
+      }
+      .btnWrapper {
+        flex: 1;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 8px;
+        justify-content: flex-end;
+      }
+      .operateBtn {
+        height: 32px;
+        padding: 0 20px;
+        line-height: 32px;
+        border-radius: 3px;
+        color: #fff;
+        background: #1677ff;
+        cursor: pointer;
+        font-weight: 500;
+        &.edit,
+        &.delete {
+          background: #f5f5f5;
+        }
+        &.edit {
+          color: #151515;
+        }
+        &.delete {
+          color: #f44336;
+        }
+
+        &:hover {
+          background: #1e88e5;
+          &.edit,
+          &.delete {
+            background: #eaeaea;
+          }
+        }
+      }
+
+      &.isMobile {
+        flex-direction: column;
+        align-items: start;
+        .statusWrapper {
+          margin-left: 0;
+        }
+        .btnWrapper {
+          width: 100%;
+          margin-top: 20px;
+        }
+        .operateBtn {
+          flex: 1;
+          text-align: center;
+        }
+        & > * {
+          margin-top: 16px;
+        }
+      }
+    }
+  }
+}

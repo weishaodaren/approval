@@ -1,0 +1,65 @@
+.searchRelationWrap {
+  padding: 10px 10px 0;
+  background: #f8f8f8;
+  .inputCon {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 36px;
+    background-color: var(--color-third);
+  }
+  .icon-search {
+    font-size: 18px;
+  }
+  input {
+    border: none;
+    padding: 0;
+    color: #151515;
+    text-indent: 5px;
+    background-color: transparent;
+    &::placeholder {
+      color: #757575;
+    }
+  }
+  .icon-workflow_cancel {
+    &.none {
+      display: none;
+    }
+  }
+}
+
+.sheetRelationRow {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #f8f8f8;
+  &.editRowWrapper {
+    .worksheetRecordCard {
+      border-color: rgba(0, 0, 0, 0.2);
+    }
+    .selectedIcon {
+      display: block !important;
+    }
+    .selectedIcon.hide {
+      border-top-color: rgba(0, 0, 0, 0.2);
+      border-right-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+  .worksheetRecordCard {
+    .deleteRecord {
+      display: none !important;
+    }
+    .titleText {
+      width: 300px;
+    }
+  }
+  .withoutRowsWrapper {
+    justify-content: center;
+    .withoutRows {
+      height: auto;
+    }
+    .am-button {
+      margin-top: 20px;
+      padding: 0 20px;
+    }
+  }
+}

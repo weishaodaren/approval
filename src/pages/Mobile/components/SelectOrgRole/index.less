@@ -1,0 +1,88 @@
+.selectOrgRoleModal {
+  height: 100%;
+  // 搜索栏
+  .searchWrapper {
+    display: flex;
+    align-items: center;
+    background-color: #f8f8f8;
+    border-radius: 24px;
+    padding: 7px 10px;
+    margin: 10px 15px;
+    .icon-h5_search {
+      color: #757575;
+      font-size: 14px;
+    }
+    .icon-workflow_cancel {
+      color: #bdbdbd;
+      font-size: 15px;
+    }
+    input {
+      width: 100%;
+      border: 0;
+      padding: 0 5px;
+      background-color: #f8f8f8;
+    }
+  }
+  .selectedWrapper {
+    max-height: 92px;
+    min-height: 46px;
+    color: #151515;
+    padding: 10px 10px 0;
+    margin: 5px 0 10px;
+    background-color: #fff;
+
+    .selectedItem {
+      display: flex;
+      align-items: center;
+      border-radius: 24px;
+      padding: 0px 8px;
+      height: 24px;
+      background-color: #f0f0f0;
+      margin: 0 10px 10px 0;
+      float: left;
+      font-size: 13px;
+
+      .curSelected {
+        max-width: 200px;
+      }
+    }
+    .icon {
+      margin-left: 5px;
+    }
+  }
+
+  .orgRoleList {
+    .orgRoleItem {
+      padding: 0 10px;
+      .radioWrap {
+        padding: 0 15px;
+        width: 50px;
+      }
+      .organizeName {
+        display: flex;
+        align-items: center;
+        min-height: 46px;
+        padding: 7px 0;
+        margin-left: 12px;
+        border-bottom: 1px solid #eaeaea;
+        font-size: 15px;
+        color: #151515;
+        word-break: break-all;
+        white-space: pre-wrap;
+      }
+      .am-list-thumb {
+        margin-right: 0;
+      }
+    }
+    .groupItem {
+      height: 55px;
+      text-align: left;
+      line-height: 55px;
+      padding: 0 19px;
+      .rotate {
+        transform: rotate(-90deg);
+        transform-origin: center center;
+      }
+    }
+  }
+}

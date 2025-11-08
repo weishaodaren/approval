@@ -1,0 +1,243 @@
+@import '/src/common/mdcss/Themes/themeVariables.less';
+
+.workSheetLeft {
+  width: 240px;
+  position: relative;
+  z-index: 10;
+  flex-direction: column;
+  background-color: #fff;
+  transition: width 0.2s;
+  border-right: 1px solid #e0e0e0;
+  &.workSheetLeftHide {
+    width: 56px !important;
+    .rightArea,
+    .workSheetItem .name,
+    .newWorkSheet .text,
+    .workSheetItem .visibilityIcon {
+      display: none !important;
+    }
+    .workSheetItem {
+      padding: 0;
+      .nameWrap {
+        padding: 0 16px;
+      }
+    }
+  }
+  .scroll-viewport > div:first-child {
+    margin-top: 6px;
+  }
+  .workSheetItem {
+    color: inherit;
+    cursor: pointer;
+    align-items: center;
+    user-select: none;
+    padding: 0 16px;
+    .nameWrap {
+      color: rgba(0, 0, 0, 0.9);
+      flex: 1;
+      min-width: 0;
+      height: 44px;
+    }
+    .iconWrap > div {
+      pointer-events: none;
+    }
+    .name {
+      display: inline-block;
+      color: inherit;
+    }
+
+    &:hover,
+    &.hover {
+      background-color: rgba(0, 0, 0, 0.04);
+      .rightArea {
+        display: flex;
+      }
+    }
+    .name:hover {
+      text-decoration: none;
+    }
+    &.active .name::before {
+      content: '';
+      position: absolute;
+      left: 2px;
+      top: 50%;
+      height: 16px;
+      width: 3px;
+      border-radius: 3px;
+      transform: translateY(-50%);
+      background: currentColor;
+    }
+    .rightArea {
+      width: 23px;
+      height: 23px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      &:hover {
+        background: #0000000d;
+      }
+      .Menu {
+        position: fixed;
+      }
+    }
+    .moreIcon,
+    .arrowIcon,
+    .openIcon {
+      color: rgba(0, 0, 0, 0.3);
+      &:hover {
+        color: rgba(0, 0, 0, 0.5);
+      }
+    }
+    .setSheetInfo {
+      position: absolute;
+      right: 0px;
+      width: 1px;
+      height: 1px;
+    }
+  }
+  .groupItems {
+    transition: height 0.2s;
+  }
+  .pLeft48 {
+    padding-left: 48px;
+  }
+  .newWorkSheet {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    i {
+      color: #9e9e9e;
+    }
+    .text {
+      color: rgba(0, 0, 0, 0.3);
+    }
+    &:hover,
+    &.active {
+      background-color: rgba(0, 0, 0, 0.04);
+      .text {
+        visibility: visible;
+      }
+    }
+  }
+  &.hide {
+    width: 0;
+    display: none;
+  }
+  .unfoldWrap {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+  .unfoldIcon {
+    padding: 8px;
+    border-radius: 50%;
+    margin-right: 12px;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+  }
+}
+
+.worksheetItemOperate {
+  text-align: left;
+  position: static !important;
+  &.grouping {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  hr.splitter {
+    border: none;
+    border-top: 1px solid #e9e9e9;
+    margin: 3px 0;
+  }
+  .Item-content {
+    padding-left: 36px;
+  }
+  .moveSheetActive {
+    color: #fff;
+    background-color: @themeColor3 !important;
+    .icon {
+      color: #fff !important;
+    }
+    .icon-arrow-right-tip {
+      color: rgba(255, 255, 255, 0.7) !important;
+    }
+  }
+  .icon-arrow-right-tip {
+    left: auto !important;
+    right: 10px;
+  }
+  .MenuItem {
+    .Icon {
+      margin: 0 2px;
+      font-size: 18px;
+      vertical-align: middle;
+      color: #999;
+    }
+    .text {
+      font-size: 13px;
+      margin-left: 4px;
+    }
+    &.delete {
+      .Icon,
+      .text {
+        color: #f44338 !important;
+      }
+    }
+  }
+  .hideItemOperate {
+    .Item-content {
+      padding-left: 20px !important;
+      .icon {
+        color: #1677ff !important;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.createNewMenu {
+  border-radius: 3px;
+  background-color: #fff;
+  .Menu {
+    width: 240px !important;
+    position: unset !important;
+  }
+  .subMenu {
+    width: 180px;
+    max-height: 300px;
+    overflow: auto;
+    .Item-content {
+      padding-left: 16px;
+      &:hover .icon {
+        color: #fff !important;
+      }
+    }
+  }
+  .MenuItem {
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    .Item-content {
+      color: #000;
+      overflow: inherit !important;
+      .icon {
+        color: #9e9e9e;
+      }
+    }
+    .icon-arrow-right-tip {
+      left: auto !important;
+      right: 10px;
+    }
+  }
+  .spaceLine {
+    height: 1px;
+    border-bottom: 1px solid #eaeaea;
+  }
+}
+
+.copySheetDialog {
+  max-height: none !important;
+}

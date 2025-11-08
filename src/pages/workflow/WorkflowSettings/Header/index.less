@@ -1,0 +1,180 @@
+.workflowSettings {
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  .workflowSettingsHeader {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+    height: 55px;
+    align-items: center;
+    background: #fff;
+    z-index: 2;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    &.workflowReleaseHeader {
+      background: #313131;
+      color: #fff;
+      .workflowHeaderDesc div,
+      .workflowHeaderTab:not(.active),
+      .workflowReleaseBox {
+        color: rgba(255, 255, 255, 0.7) !important;
+      }
+      .workflowHeaderTab.active,
+      .icon-restore2:hover {
+        color: #fff !important;
+      }
+      .workflowReturn {
+        color: #fff;
+        &:hover {
+          background: rgba(0, 0, 0, 0.24);
+        }
+      }
+    }
+    .workflowReturn {
+      cursor: pointer;
+      margin-right: 10px;
+      font-size: 20px;
+      padding: 4px;
+      color: #757575;
+      border-radius: 50%;
+      height: 28px;
+      width: 28px;
+      display: flex;
+      &:hover {
+        background: #f8f8f8;
+      }
+    }
+    .workflowHeaderDesc {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      justify-content: center;
+    }
+    .workflowHeaderTab {
+      margin: 0 20px;
+      cursor: pointer;
+      border-bottom-width: 4px;
+      border-bottom-style: solid;
+      padding: 0 5px;
+      height: 55px;
+      line-height: 59px;
+      box-sizing: border-box;
+      transition: all 0.3s ease-out;
+      &:not(:hover):not(.active) {
+        color: #757575 !important;
+        border-bottom-color: transparent !important;
+      }
+    }
+    .workflowSettingsHeaderUpdateBtn {
+      height: 22px;
+      background: #151515;
+      border-radius: 11px;
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 9px;
+    }
+    .iconWrap {
+      width: 36px;
+      height: 36px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .icon {
+        font-size: 24px;
+        color: #fff;
+      }
+    }
+  }
+  .flowEmptyWrap {
+    max-height: 440px;
+    display: flex;
+    height: 100%;
+    border-radius: 4px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .flowEmptyPic {
+      background: url('./images/empty.png') no-repeat;
+      background-size: 260px 130px;
+      width: 130px;
+      height: 130px;
+      &-lock {
+        background-position: 0 0;
+      }
+      &-del {
+        background-position: -130px 0;
+      }
+    }
+  }
+  .workflowAction {
+    padding: 0 22px;
+    margin-right: 16px;
+    height: 38px;
+    line-height: 38px;
+    border-radius: 3px;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid #bdbdbd;
+    color: #757575;
+    &::after {
+      text-align: left;
+    }
+  }
+}
+
+.publishSuccessDialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  flex-direction: column;
+  text-align: center;
+  .publishSuccessImg {
+    background: url('images/icon.png');
+    width: 190px;
+    height: 110px;
+    background-size: 190px 110px;
+  }
+}
+
+.leaveWorkflowConfirm {
+  .Dialog-footer-btns {
+    .Button--primary {
+      background: #f44336;
+      &:hover {
+        background: #e53935;
+      }
+    }
+  }
+}
+
+#workflowNodeNotes {
+  height: 180px;
+  overflow: auto;
+  resize: none;
+  vertical-align: top;
+  width: 100%;
+  border-color: #bdbdbd;
+}
+
+.actionProcessDialog {
+  .Dialog-footer-btns {
+    .Button--primary:first-child {
+      background: #fff !important;
+      color: #151515;
+      border: 1px solid #d0d0d0;
+      &:hover {
+        color: #1677ff;
+        border-color: #1677ff;
+      }
+    }
+  }
+}

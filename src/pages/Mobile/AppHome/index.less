@@ -1,0 +1,278 @@
+.appHomeMobile {
+  background: #fff;
+
+  #containerBg {
+    background: #fff;
+  }
+
+  .guideWrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    .guide {
+      position: absolute;
+      border-radius: 8px;
+      box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 0px 1000px;
+    }
+    .guide1 {
+      width: 46%;
+      height: 115px;
+      top: 130px;
+      left: 2%;
+    }
+    .guide2 {
+      width: 25%;
+      height: 115px;
+      top: 135px;
+      right: 26%;
+    }
+    .guideImg {
+      width: 68px;
+      left: 41px;
+      top: 273px;
+    }
+    .text {
+      width: 95%;
+      top: 379px;
+      right: 0;
+    }
+    .ok,
+    .ok2 {
+      padding: 5px 10px;
+      border-radius: 25px;
+      border: 1px solid #fff;
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+    .ok {
+      right: 20px;
+      top: 470px;
+    }
+    .guide2Img {
+      width: 68px;
+      right: 33%;
+      top: 273px;
+    }
+    .text2 {
+      width: 88%;
+      top: 380px;
+      left: 20px;
+    }
+    .ok2 {
+      right: 50px;
+      top: 430px;
+    }
+  }
+
+  .justifyContentCenter {
+    justify-content: center;
+  }
+
+  body {
+    background: #fff;
+
+    #app {
+      .listConBox {
+        display: flex;
+        flex-direction: column;
+        .content {
+          flex: 1;
+          overflow-y: auto;
+          padding-bottom: 24px;
+          background-color: #fff;
+          .appGroupEntry {
+            height: 56px;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            padding: 0 16px 0 0;
+            .icon {
+              line-height: 50px;
+              &.icon-list {
+                margin-right: 14px;
+              }
+            }
+          }
+          .pLeft47 {
+            padding-left: 47px;
+          }
+        }
+
+        .appCon {
+          width: 100%;
+          padding: 0 6px 16px;
+          box-sizing: border-box;
+          flex-wrap: wrap;
+        }
+
+        .appBelongInfo {
+          display: inline-block;
+          align-items: center;
+          margin-left: 12px;
+          padding: 0 12px 0 10px;
+          border-radius: 14px;
+          line-height: 28px;
+          text-align: center;
+          font-size: 12px;
+          background-color: #f5f5f5;
+
+          span {
+            color: #757575;
+            margin-left: 4px;
+          }
+
+          .purchase {
+            color: #1677ff;
+            cursor: pointer;
+          }
+        }
+        .appSearchWrapper {
+          height: 36px;
+          line-height: 36px;
+          border-radius: 36px;
+          background-color: #f5f5f5;
+          padding: 11px 13px;
+          height: 36px;
+          line-height: 36px;
+          border-radius: 36px;
+          background-color: #f5f5f5;
+          padding: 0px 13px;
+          display: flex;
+          font-size: 14px;
+          margin: 0 10px 15px 16px;
+          .icon {
+            line-height: 36px;
+            &.searchIcon {
+              color: #616161;
+            }
+          }
+          input {
+            background-color: #f5f5f5;
+          }
+        }
+        .textScanQRCodeWrap {
+          width: 36px;
+          height: 36px;
+          background: #f5f5f5;
+          border-radius: 50%;
+          margin-right: 16px;
+          position: relative;
+          > div {
+            border: none;
+          }
+        }
+        .noNetworkBox {
+          align-items: center;
+          justify-content: center;
+          .noNetworkBoxBG {
+            background: url('./img/empty.png') no-repeat;
+            background-size: 256px 131px;
+            width: 256px;
+            height: 131px;
+          }
+          .joinNetwork,
+          .createNetwork {
+            padding: 0 20px;
+            height: 36px;
+            line-height: 36px;
+            box-sizing: border-box;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            color: #fff;
+            font-size: 14px;
+          }
+          .createNetwork {
+            border-width: 1px;
+            border-style: solid;
+            &:not(:hover) {
+              background: #fff !important;
+            }
+            &:hover {
+              color: #fff !important;
+            }
+          }
+          .ThemeColor3 {
+            color: #1677ff;
+          }
+          .ThemeBGColor3 {
+            background-color: #1677ff;
+          }
+        }
+      }
+    }
+
+    .addApp {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      margin-top: 10px;
+      border-radius: 25px;
+      background-color: #1677ff;
+    }
+
+    .createInfoModal {
+      .am-modal-body {
+        display: none;
+      }
+    }
+  }
+
+  .errPageCon {
+    padding: 0 88px;
+  }
+}
+
+.listConBox {
+  .spaceBottom {
+    height: 10px;
+    min-height: 10px;
+    background-color: #f5f5f5;
+  }
+  .content {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 16px;
+    background-color: #fff;
+  }
+  .groupHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 16px 0;
+    .title {
+      font-size: 17px;
+      font-weight: 600;
+    }
+    .recentIcon {
+      display: inline-block;
+      transform: rotate(90deg);
+    }
+    .bold500 {
+      font-weight: 500;
+    }
+  }
+
+  .groupCon {
+    padding: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding-bottom: 6px;
+  }
+
+  .recordIconWrap {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    text-align: center;
+  }
+
+  .chartItemWrap {
+    height: 300px;
+    border-bottom: 1px solid #f5f5f5;
+    padding: 16px 0 15px;
+    box-sizing: content-box;
+  }
+}

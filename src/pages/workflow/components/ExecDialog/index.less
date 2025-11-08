@@ -1,0 +1,320 @@
+@activeColor: #1677ff;
+@refuseColor: #f44336;
+@passColor: #4caf50;
+
+.workflowStepHeader {
+  position: relative;
+  width: 100%;
+  height: 51px;
+  align-items: center;
+  line-height: normal;
+
+  .stepTitle,
+  .operation,
+  .operationTime,
+  .more {
+    align-items: center;
+  }
+
+  .stepTitle {
+    border-radius: 16px;
+    padding: 0 14px 0 10px;
+    height: 32px;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+
+    &.errorHeader {
+      background: rgba(51, 51, 51, 0.16);
+      cursor: default;
+    }
+
+    &.stepTitleActive {
+      color: #fff !important;
+    }
+
+    &.stepTitle_edit {
+      color: #1677ff;
+      background: rgba(33, 150, 243, 0.16);
+      &:hover {
+        background: rgba(33, 150, 243, 0.24);
+      }
+
+      &.stepTitleActive {
+        background: #1677ff !important;
+      }
+    }
+
+    &.stepTitle_approve {
+      color: #7e57c2;
+      background: rgba(126, 87, 194, 0.16);
+      &:hover {
+        background: rgba(126, 87, 194, 0.24);
+      }
+
+      &.stepTitleActive {
+        background: #7e57c2 !important;
+      }
+    }
+
+    &.stepTitle_default,
+    &.stepTitle_notice {
+      color: #ffa340;
+      background: rgba(255, 163, 64, 0.16);
+      &:hover {
+        background: rgba(255, 163, 64, 0.24);
+      }
+
+      &.stepTitleActive {
+        background: #ffa340 !important;
+      }
+    }
+
+    span {
+      display: inline-block;
+      max-width: 320px;
+    }
+  }
+
+  .headerBtn {
+    border-radius: 4px;
+    padding: 5px 18px 5px 16px !important;
+    display: inline-flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 13px;
+
+    &.overrule,
+    &.revoke {
+      background-color: @refuseColor;
+      color: #fff;
+      &:hover {
+        background-color: #dd3f33;
+      }
+    }
+
+    &.pass {
+      background-color: @passColor;
+      color: #fff;
+      &:hover {
+        background-color: #3e9a42;
+      }
+    }
+
+    &.submit,
+    &.urge {
+      background-color: @activeColor;
+      color: #fff;
+      &:hover {
+        background-color: #1e88e5;
+      }
+    }
+
+    &.urge {
+      &.Button--disabled {
+        background-color: #f5f5f5;
+        color: #bdbdbd;
+        &:hover {
+          background-color: #f5f5f5;
+        }
+      }
+    }
+
+    &.return,
+    &.taskRevoke {
+      background-color: #ffa340;
+      color: #fff;
+      &:hover {
+        background-color: #ff8f17;
+      }
+    }
+
+    &.transferApprove,
+    &.sign,
+    &.transfer,
+    &.stash {
+      background-color: #fff;
+      color: #151515;
+      border: 1px solid #ddd;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      transition: none;
+      i {
+        color: #757575;
+      }
+      &:hover {
+        background-color: #1677ff;
+        color: #fff;
+        border-color: #1677ff;
+        i {
+          color: #fff;
+        }
+      }
+    }
+
+    span {
+      max-width: 100px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      display: block;
+    }
+  }
+
+  .iconWrap {
+    border-radius: 5px;
+    width: 30px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      background-color: #f7f7f7;
+    }
+  }
+
+  .more {
+    position: relative;
+    cursor: pointer;
+
+    .moreOperation {
+      position: absolute;
+      top: 30px;
+      right: 0 !important;
+      left: initial !important;
+
+      .actionText {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .workflowStepIcon {
+    width: 24px;
+    height: 24px;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+
+  .refreshBtn.isLoading {
+    .icon-task-later {
+      display: inline-block;
+      animation: rotate 0.6s infinite linear;
+    }
+  }
+}
+
+.addApproveWayDialog {
+  .action {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    align-items: center;
+    cursor: pointer;
+
+    &.active {
+      border: 1px solid @activeColor;
+    }
+
+    &:hover {
+      border: 1px solid @activeColor;
+    }
+
+    &:first-child {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.approveDialog {
+  .mui-dialog-body {
+    background: #fff;
+  }
+  .mui-dialog-footer {
+    background: #fff;
+    .ming.Button {
+      font-weight: bold;
+    }
+  }
+  &.approveDialogBtn {
+    .Button--primary.Button {
+      background: #f44336;
+
+      &:hover {
+        background: #ba160a;
+      }
+    }
+  }
+  &.overruleBackBtn {
+    .Button--link.Button {
+      background: #f44336;
+      color: #fff;
+
+      &:hover {
+        background: #ba160a;
+      }
+    }
+  }
+
+  header {
+    align-items: center;
+
+    .userAvatar {
+      margin: 0 10px;
+    }
+  }
+
+  .mui-dialog-body {
+    overflow: inherit !important;
+  }
+
+  .customFormControlBox {
+    &:not(.customFormAttachmentBox) {
+      cursor: default;
+    }
+    .addSignature {
+      width: 180px;
+      height: 40px;
+      background: #f5f5f5;
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+  }
+
+  .ming.Textarea:disabled {
+    background-color: #f5f5f5;
+  }
+
+  .customFieldsContainer {
+    .triggerTraget,
+    .uploadFromMobile {
+      height: 1px !important;
+      visibility: hidden;
+      border: none;
+    }
+  }
+  .signatureFromMobile {
+    font-size: 12px;
+    color: #757575;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    .icon {
+      font-size: 16px;
+      margin-right: 6px;
+    }
+  }
+}
+
+.approveDialogCallBack {
+  width: 256px;
+
+  .ming.Menu {
+    width: 256px;
+  }
+}

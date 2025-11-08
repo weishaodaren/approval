@@ -1,0 +1,90 @@
+import _ from 'lodash';
+
+export const routerConfigs = [
+  {
+    type: 'options',
+    icon: 'dropdown',
+    text: _l('选项集%02047'),
+    component: () => import('./components/AllOptionList'),
+  },
+  {
+    type: 'aggregations',
+    icon: 'aggregate_table',
+    text: _l('聚合表'),
+    featureId: 38,
+    component: () => import('./components/Aggregation'),
+  },
+  {
+    type: 'variables',
+    icon: 'global_variable',
+    featureId: 33,
+    text: _l('全局变量'),
+    component: () => import('./components/AppGlobalVariable'),
+  },
+  {
+    type: 'relationship',
+    icon: 'circle_three',
+    text: _l('关系图'),
+    component: () => import('./components/EntityRelationship'),
+  },
+  {
+    type: 'publish',
+    icon: 'send',
+    text: _l('发布'),
+    component: () => import('./components/EditpublishSet'),
+  },
+  { type: 'lock', icon: 'lock', text: _l('锁定'), component: () => import('./components/LockApp') },
+  {
+    type: 'export',
+    icon: 'cloud_download',
+    text: _l('导出'),
+    featureId: 2,
+    component: () => import('./components/ExportAppCom'),
+  },
+  {
+    type: 'upgrade',
+    icon: 'unarchive',
+    text: _l('导入升级'),
+    featureId: 1,
+    component: () => import('./components/ImportUpgrade'),
+  },
+  {
+    type: 'backup',
+    icon: 'cloud_sync',
+    text: _l('备份与还原'),
+    featureId: 1,
+    component: () => import('./components/appBackupRestore/ManageBackupFiles'),
+  },
+  {
+    type: 'appOfflineSubmit',
+    icon: 'offline',
+    text: _l('APP离线提交'),
+    component: () => import('./components/AppOfflineSubmit'),
+  },
+  {
+    type: 'language',
+    icon: 'language',
+    featureId: 35,
+    text: _l('语言'),
+    component: () => import('./components/MultiLingual'),
+  },
+  {
+    type: 'timezone',
+    icon: 'watch_later',
+    text: _l('时区'),
+    component: () => import('./components/AppTimeZone'),
+  },
+  {
+    type: 'recyclebin',
+    icon: 'knowledge-recycle',
+    text: _l('回收站'),
+    featureId: 16,
+    component: () => import('src/pages/worksheet/common/Trash/AppItemTrash'),
+  },
+  {
+    type: 'del',
+    icon: 'trash',
+    text: _l('删除应用%02037'),
+    className: 'delApp',
+  },
+].filter(o => !(_.get(window, 'md.global.SysSettings.hideDataPipeline') && o.type === 'aggregations'));

@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "paths": {
+      "worksheet/*": ["./src/pages/worksheet/*"],
+      "ming-ui/*": ["./src/ming-ui/*"]
+    }
+  },
+  "exclude": ["src/library", "node_modules"],
+  "include": ["src"]
+}

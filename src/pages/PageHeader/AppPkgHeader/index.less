@@ -1,0 +1,848 @@
+@delColor: #f44336;
+
+.headerColorSwitch {
+  color: rgba(255, 255, 255, 0.8);
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.colorHover {
+  color: #9e9e9e;
+  transition: all 0.25s;
+
+  &:hover {
+    color: #1677ff;
+  }
+}
+
+.flexCenterHeight {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.tri(@len: 6px; @dir: top; @color: #fff) {
+  width: 0;
+  height: 0;
+  border: @len solid transparent;
+  border-@{dir}-color: @color;
+  transition: all 0.25s;
+
+  &:hover {
+    border-@{dir}-color: rgba(255, 255, 255, 1);
+  }
+}
+
+.arrow(@len: 6px; @thin: 2px; @angel: -135deg; @color: #fff) {
+  width: @len;
+  height: @len;
+  background-color: transparent;
+  border: @thin solid transparent;
+  border-top-color: @color;
+  border-left-color: @color;
+  transform: rotate(@angel);
+}
+
+.appPkgHeaderWrap {
+  .flexCenterHeight();
+  height: 50px;
+  justify-content: space-between;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.24);
+  z-index: 15;
+
+  .roledebugSelectWrap,
+  .roleSelectCon {
+    border: 1px solid transparent;
+  }
+
+  &.theme,
+  &.black {
+    .LeftAppGroupWrap .workSheetLeft {
+      .nameWrap .name {
+        font-weight: bold;
+      }
+    }
+    .roledebugSelectWrap {
+      background: rgba(0, 0, 0, 0.3) !important;
+      color: rgba(255, 255, 255, 0.8) !important;
+      a {
+        color: rgba(255, 255, 255, 0.8) !important;
+      }
+      .roledebugSelectWrap-iconWrap:hover,
+      .text:hover,
+      .iconHover:hover {
+        color: rgba(255, 255, 255, 1) !important;
+      }
+      &:hover {
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+      }
+    }
+  }
+  &.light {
+    .emptyGroupIcon {
+      color: rgba(0, 0, 0, 0.4) !important;
+    }
+    .appConfigIcon > .icon,
+    .appIntroWrap > .icon,
+    .appNameHeaderBoxPortal .icon {
+      color: rgba(0, 0, 0, 0.4) !important;
+      &:hover {
+        color: rgba(0, 0, 0, 0.5) !important;
+      }
+    }
+    .appItemsWrap .topTri {
+      border-top-color: rgba(0, 0, 0, 0.4) !important;
+      &:hover {
+        border-top-color: rgba(0, 0, 0, 0.5) !important;
+      }
+    }
+    .appItemsWrap {
+      li:hover {
+        background: rgba(0, 0, 0, 0.03);
+      }
+    }
+    .homepageIconWrap {
+      background: rgba(0, 0, 0, 0.04) !important;
+      .homepageIcon .icon {
+        color: rgba(0, 0, 0, 0.3);
+      }
+      .homepageIcon .item {
+        background: rgba(0, 0, 0, 0.3);
+      }
+      &:hover {
+        background: rgba(0, 0, 0, 0.08) !important;
+        .homepageIcon .icon {
+          color: rgba(0, 0, 0, 0.7);
+        }
+        .homepageIcon .item {
+          background: rgba(0, 0, 0, 0.7);
+        }
+      }
+    }
+    .appIconAndName {
+      color: rgba(0, 0, 0, 0.8) !important;
+    }
+    .sortableItem {
+      color: rgba(0, 0, 0, 0.7);
+    }
+    .leftPointer {
+      border-right-color: rgba(0, 0, 0, 0.7);
+      &:not(.disable):hover {
+        border-right-color: rgba(0, 0, 0, 1) !important;
+      }
+      &.disable {
+        border-right-color: rgba(0, 0, 0, 0.4);
+      }
+    }
+    .rightPointer {
+      border-left-color: rgba(0, 0, 0, 0.7);
+      &:not(.disable):hover {
+        border-left-color: rgba(0, 0, 0, 1) !important;
+      }
+      &.disable {
+        border-left-color: rgba(0, 0, 0, 0.4);
+      }
+    }
+    .backlogWrap,
+    .appExtensionWrap .appExtensionItem,
+    .commonUserHandleWrap .icon {
+      color: rgba(0, 0, 0, 0.5) !important;
+      &:hover {
+        color: rgba(0, 0, 0, 0.6) !important;
+      }
+    }
+    .backlogWrap,
+    .leftCommonUserHandleWrap .headerColorSwitch,
+    .appExtensionWrap .appExtensionItem,
+    .appPkgHeaderSearch,
+    .workflowHelpIconWrap {
+      &:hover {
+        background: rgba(0, 0, 0, 0.03) !important;
+      }
+    }
+    .LeftAppGroupWrap {
+      .appGroupWrap::after {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+      .moreIcon,
+      .arrowIcon,
+      .openIcon {
+        color: rgba(0, 0, 0, 0.3) !important;
+      }
+      .appGroup {
+        color: rgba(0, 0, 0, 0.5);
+        &.close {
+          color: rgba(0, 0, 0, 0.75) !important;
+        }
+      }
+    }
+    .roledebugSelectWrap {
+      background: rgba(0, 0, 0, 0.1) !important;
+      color: rgba(0, 0, 0, 0.5) !important;
+      a {
+        color: rgba(0, 0, 0, 0.5) !important;
+      }
+      .roledebugSelectWrap-iconWrap:hover,
+      .text:hover,
+      .iconHover:hover {
+        color: rgba(0, 0, 0, 0.6) !important;
+      }
+      .roledebugSelectWrap-iconWrap:hover::after {
+        background: rgba(0, 0, 0, 0.2);
+      }
+    }
+    .roleSelectCon {
+      background: rgba(0, 0, 0, 0.1);
+      color: rgba(0, 0, 0, 0.4);
+      span:hover,
+      i:hover {
+        color: rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
+  &.black {
+    .roleSelectCon {
+      background: rgba(255, 255, 255, 0.15);
+      color: rgba(255, 255, 255, 0.7);
+      span:hover,
+      i:hover {
+        color: rgba(255, 255, 255, 1);
+      }
+      &:hover,
+      &.active {
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+      }
+      &.active {
+        color: rgba(255, 255, 255, 1);
+      }
+    }
+    .homepageIconWrap {
+      background: rgba(255, 255, 255, 0.1) !important;
+      .homepageIcon .icon {
+        color: rgba(255, 255, 255, 0.85);
+      }
+      .homepageIcon .item {
+        background: rgba(255, 255, 255, 0.85);
+      }
+    }
+    .appItemsWrap {
+      li:hover {
+        background: rgba(255, 255, 255, 0.1);
+        .sortableItem {
+          color: #fff;
+        }
+      }
+      li.active {
+        background: rgba(255, 255, 255, 0.15);
+        .sortableItem {
+          color: #fff;
+        }
+      }
+      li .sortableItem {
+        color: rgba(255, 255, 255, 0.85);
+      }
+    }
+    .backlogWrap {
+      color: rgba(255, 255, 255, 0.85) !important;
+    }
+    .appGroup {
+      .nameWrap {
+        color: rgba(255, 255, 255, 0.65) !important;
+      }
+      &.close {
+        .nameWrap {
+          color: rgba(255, 255, 255, 0.9) !important;
+        }
+      }
+    }
+    .rightArea:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    .workSheetLeft .workSheetItem:hover {
+      background-color: rgba(255, 255, 255, 0.1) !important;
+    }
+    .emptyAppItemWrap .emptyAppItem:hover,
+    .emptyAppItemWrap .emptyAppItem.active,
+    .roledebugSelectWrap {
+      background-color: rgba(255, 255, 255, 0.15) !important;
+      .roledebugSelectWrap-iconWrap:hover::after {
+        background: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+
+  &.theme {
+    .roleSelectCon {
+      background: rgba(0, 0, 0, 0.3);
+      color: rgba(255, 255, 255, 0.8);
+      span:hover,
+      i:hover {
+        color: rgba(255, 255, 255, 1);
+      }
+      &:hover,
+      &.active {
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+      }
+      &.active {
+        color: rgba(255, 255, 255, 1);
+      }
+    }
+    .roledebugSelectWrap {
+      .roledebugSelectWrap-iconWrap:hover::after {
+        background: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+
+  .LeftAppGroupWrap {
+    .appGroup {
+      color: rgba(255, 255, 255, 0.75);
+      &.close {
+        color: rgba(255, 255, 255, 0.9) !important;
+        .arrowIcon {
+          display: block !important;
+        }
+      }
+    }
+    .moreIcon,
+    .arrowIcon,
+    .openIcon {
+      color: rgba(255, 255, 255, 0.7) !important;
+    }
+  }
+
+  .appNameHeaderBoxPortal .headerCenter {
+    display: none;
+  }
+
+  .helpIcon {
+    color: #fff;
+  }
+
+  .appDetailWrap {
+    position: relative;
+    .flexCenterHeight();
+
+    .appIconAndName {
+      .flexCenterHeight();
+      cursor: pointer;
+      color: #fff;
+
+      &:hover {
+        color: rgba(255, 255, 255, 0.9);
+      }
+    }
+    .flexStart {
+      align-items: flex-start;
+    }
+    .leftAppStyleAppName {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      text-overflow: ellipsis;
+      word-break: break-word;
+      overflow: hidden;
+    }
+  }
+
+  .appFixed {
+    border-radius: 13px;
+    color: #fff;
+    line-height: 22px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    font-weight: bold;
+    padding: 0 10px;
+    font-size: 12px;
+    margin-left: 5px;
+    background: #fd7558;
+  }
+  .appUpgrade {
+    border-radius: 13px;
+    color: #fff;
+    line-height: 22px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    font-weight: bold;
+    padding: 0 10px;
+    font-size: 12px;
+    margin-left: 5px;
+    background: #4caf50;
+  }
+
+  .appInfoWrap {
+    box-sizing: border-box;
+    min-width: 240px;
+    max-width: 520px;
+    flex-shrink: 0;
+
+    .Item-content {
+      .icon {
+        color: #9e9e9e;
+      }
+    }
+
+    .homepageIconWrap {
+      display: flex;
+      align-items: center;
+      padding: 8px;
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      margin: 0 5px 0 10px;
+      cursor: pointer;
+      width: max-content;
+      &:hover {
+        background: rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    .backlogWrap {
+      padding: 5px 5px;
+      border-radius: 20px;
+      position: relative;
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+    }
+
+    .count {
+      color: #fff;
+      border-radius: 20px;
+      min-width: 20px;
+      height: 20px;
+      background-color: #f76d6d;
+      width: auto;
+      padding: 0 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .weakCount {
+      height: 7px;
+      width: 7px;
+      border-radius: 20px;
+      background-color: #f76d6d;
+      position: absolute;
+      right: 6px;
+      top: 3px;
+    }
+
+    .delApp {
+      .icon {
+        color: @delColor !important;
+        left: 16px !important;
+      }
+
+      .Item-content {
+        color: @delColor !important;
+        padding-left: 48px !important;
+      }
+    }
+
+    .appConfigIcon {
+      position: relative;
+      padding-left: 3px;
+      color: rgba(255, 255, 255, 0.6);
+      margin: 0 8px 0 0;
+      height: max-content;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    .modifyAppInfo {
+      top: 45px;
+      left: 45px;
+      z-index: 100;
+    }
+
+    .appIntroWrap {
+      margin: 2px 10px 0 0;
+      height: max-content;
+    }
+
+    .appIntroIcon {
+      font-size: 18px;
+      transition: all 0.25s;
+      .headerColorSwitch();
+    }
+  }
+
+  .homepageIconWrap:hover .homepageIcon {
+    .icon {
+      color: #fff;
+    }
+    .item {
+      background-color: #fff;
+    }
+  }
+
+  .appName {
+    margin: 0 2px;
+    font-size: 15px;
+    font-weight: bold;
+    max-width: 300px;
+  }
+
+  .appIconWrap {
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .topTri {
+    position: absolute;
+    right: 12px;
+    top: calc(50% - 3px);
+    .tri(@len: 5px, @color: rgba(255, 255, 255, 0.6));
+    transition: all 0.25s;
+  }
+
+  .bottomTri {
+    .tri(@dir: bottom);
+  }
+
+  .appGroupIntro {
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 625px;
+    padding: 20px 24px;
+    background-color: #fff;
+    z-index: 10;
+    box-shadow:
+      0px 4px 16px 1px rgba(0, 0, 0, 0.24),
+      0 0 1px 0 rgba(0, 0, 0, 0.12);
+    transform: scale(0);
+    transform-origin: left top;
+    transition: transform 0.25s;
+
+    &.appItemIntroVisible {
+      transform: scale(1);
+    }
+
+    .close {
+      position: absolute;
+      right: 8px;
+      top: 8px;
+      cursor: pointer;
+
+      .icon {
+        font-size: 20px;
+        color: #9e9e9e;
+      }
+    }
+
+    .title {
+      font-size: 17px;
+      color: #151515;
+      font-weight: bold;
+    }
+
+    .explain {
+      margin: 8px 0 10px 0;
+      color: #757575;
+    }
+
+    .introPic {
+      img {
+        width: 100%;
+      }
+    }
+
+    .btnWrap {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 10px;
+      cursor: pointer;
+
+      span {
+        margin-left: 4px;
+      }
+    }
+  }
+
+  .appItemsOuterWrap {
+    .flexCenterHeight();
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .appExtensionWrap {
+    .flexCenterHeight();
+    flex-shrink: 0;
+    font-weight: bold;
+
+    .appExtensionItem {
+      .headerColorSwitch();
+      padding: 2px 7px;
+      margin-right: 10px;
+      cursor: pointer;
+      border-radius: 20px;
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+    .count {
+      color: #fff;
+      border-radius: 20px;
+      font-size: 12px;
+      padding: 0 4px;
+      height: 20px;
+      min-width: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f76d6d;
+    }
+    .weakCount {
+      height: 7px;
+      width: 7px;
+      border-radius: 20px;
+      background-color: #f76d6d;
+      position: absolute;
+      right: 6px;
+      top: 3px;
+    }
+  }
+
+  .appItemsInnerWrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .emptyAppItemWrap {
+    position: relative;
+    flex: 1;
+
+    .emptyAppItem {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 50px;
+      cursor: pointer;
+
+      &:hover,
+      &.active {
+        background: rgba(0, 0, 0, 0.15);
+
+        .emptyGroupIcon {
+          color: #fff;
+        }
+      }
+
+      & > .icon {
+        font-size: 23px;
+        .headerColorSwitch();
+      }
+    }
+
+    .emptyGroupIcon {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  .commonUserHandleWrap {
+    .appPkgHeaderSearch,
+    .workflowHelpIconWrap {
+      .icon {
+        transition: all 0.25s;
+        color: rgba(255, 255, 255, 0.8);
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.appItemsWrap {
+  display: flex;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50px;
+}
+
+.appItemPointerWrap {
+  .flexCenterHeight();
+  width: 36px;
+  justify-content: space-between;
+  margin-right: 48px;
+  flex-shrink: 0;
+  visibility: hidden;
+
+  &.visible {
+    visibility: visible;
+  }
+
+  .appItemPointer {
+    transition: all 0.25s;
+  }
+
+  .leftPointer {
+    .tri(@dir: right);
+    color: rgba(255, 255, 255, 0.8);
+
+    &:not(.disable):hover {
+      color: #fff;
+      .tri(@len: 7px, @dir: right);
+    }
+
+    &.disable {
+      border-right-color: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  .rightPointer {
+    .tri(@dir: left);
+
+    &:not(.disable):hover {
+      .tri(@len: 7px, @dir: left);
+    }
+
+    &.disable {
+      border-left-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+
+.delAppItemDialog {
+  font-size: 14px;
+
+  .explain {
+    margin-bottom: 20px;
+    color: #757575;
+  }
+
+  .moveTo {
+    & > span {
+      margin-right: 4px;
+    }
+  }
+
+  .delAppItemDropdown {
+    width: 240px;
+    border: 1px solid #bdbdbd;
+    border-radius: 4px;
+    margin-left: 12px;
+
+    .Dropdown--input {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+.appGroupConfigWrap {
+  .Item .Item-content {
+    .icon {
+      color: #9e9e9e;
+    }
+  }
+
+  .delApp.Item {
+    color: @delColor !important;
+
+    .Item-content {
+      .icon {
+        color: @delColor !important;
+      }
+    }
+  }
+}
+
+.appItemsWrap li {
+  .flexCenterHeight();
+  position: relative;
+  box-sizing: border-box;
+  white-space: nowrap;
+  cursor: pointer;
+  color: #fff;
+  flex-shrink: 0;
+  font-weight: bold;
+
+  &.active,
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+    font-weight: bold;
+  }
+
+  &.active {
+    background-color: rgba(0, 0, 0, 0.15);
+    .sortableItem::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 2px;
+      height: 3px;
+      width: 20px;
+      border-radius: 3px;
+      transform: translateX(-50%);
+      background: currentColor;
+    }
+  }
+
+  &.isCanConfigAppGroup {
+    .sortableItem {
+      padding: 0 30px 0 20px;
+    }
+  }
+
+  .sortableItem {
+    .flexCenterHeight();
+    padding: 0 20px;
+    position: relative;
+    color: #fff;
+    a {
+      color: #fff;
+    }
+
+    input {
+      box-sizing: border-box;
+      width: 150px;
+      height: 28px;
+      border: none;
+      outline: none;
+      line-height: 14px;
+      padding-left: 7px;
+      border-radius: 2px;
+      font-size: 14px;
+      color: #151515;
+    }
+
+    span {
+      display: inline-block;
+      box-sizing: border-box;
+      max-width: 170px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  & > span,
+  & > .icon {
+    color: #fff;
+  }
+}

@@ -1,0 +1,167 @@
+.endCom {
+  margin-top: 16px;
+  width: 100%;
+  background: rgba(255, 147, 0, 0.1);
+  border-radius: 3px;
+  display: flex;
+  padding: 12px 20px;
+  justify-content: center;
+  align-items: center;
+  .error {
+    color: #ff9300;
+  }
+  p {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+  }
+}
+.settingContent {
+  .selectBox.selectStartOrEndCon {
+    position: relative;
+    margin-top: 16px;
+    &::before {
+      content: ' ';
+      width: 1px;
+      height: calc(~'100% - 42px');
+      border: 1px solid #e5e5e5;
+      position: absolute;
+      top: 22px;
+      left: 8px;
+      z-index: 0;
+    }
+    .startCom {
+      position: relative;
+      .itemText {
+        padding-left: 20px;
+      }
+      .tag {
+        position: absolute;
+        left: 1px;
+        top: 10px;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: #1677ff;
+        border-radius: 50%;
+      }
+      .txt {
+        margin-left: 28px;
+        width: 60px;
+        padding-right: 20px;
+      }
+      .dropCon {
+        width: 100%;
+        max-width: 230px;
+        height: 36px;
+        background: #ffffff;
+        border-radius: 3px;
+        &.isDelete {
+          .ant-select-selector {
+            border: 1px solid #f44336;
+          }
+        }
+        &.ant-select-focused:not(.ant-select-disabled).isDelete {
+          .ant-select-selector {
+            box-shadow: 0 0 0 2px rgba(244, 67, 54, 0.1);
+          }
+        }
+        .ant-select-selector {
+          border-radius: 3px;
+          height: 36px !important;
+          .ant-select-selection-item {
+            line-height: 36px !important;
+            height: 36px !important;
+          }
+        }
+      }
+      .errorTxtOption {
+        margin: 0 0 0 24px;
+      }
+      &.end {
+        .tag {
+          left: 5px;
+          top: 15px;
+          width: 8px;
+          height: 8px;
+          background: #e0e0e0;
+          &.has {
+            background: #1677ff;
+          }
+        }
+      }
+    }
+  }
+  .error-select {
+    .ant-select-selector {
+      border-color: #f44336 !important;
+      color: #f44336;
+
+      .ant-select-selection-item {
+        color: #f44336;
+      }
+    }
+  }
+
+  .disabled-select {
+    .ant-select-selector {
+      background-color: #f5f5f5;
+      cursor: not-allowed;
+    }
+  }
+
+  .addControl {
+    color: #1677ff;
+    padding: 8px 12px;
+  }
+
+  .ant-select-item-option-disabled {
+    opacity: 0.5;
+  }
+}
+.dropConOption {
+  .ant-select-item {
+    padding: 0px 12px;
+    line-height: 36px !important;
+    height: 36px !important;
+    transition: none;
+  }
+  .ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+    background-color: #1677ff !important;
+    color: #fff !important;
+    .icon {
+      color: #fff !important;
+    }
+  }
+  .select_drop.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+    font-weight: normal !important;
+    background-color: #fff !important;
+    color: #151515 !important;
+    .icon {
+      color: #9e9e9e !important;
+    }
+    &:hover {
+      background-color: #1677ff !important;
+      color: #fff !important;
+      .icon {
+        color: #fff !important;
+      }
+    }
+  }
+  .addControl,
+  .addControl.ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+    color: #1677ff;
+    background-color: #fff;
+    .icon {
+      color: #1677ff;
+    }
+  }
+}
+.worksheetViewConfig {
+  .errorTxtOption {
+    margin: 10px 0 0 88px !important;
+  }
+}
+.viewContentCon .settingContent .selectBox.selectStartOrEndCon .startCom .dropCon {
+  max-width: 215px;
+}

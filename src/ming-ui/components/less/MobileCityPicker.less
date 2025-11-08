@@ -1,0 +1,79 @@
+.mobileCityPicker {
+  height: 100%;
+  font-size: 15px !important;
+
+  .am-tabs-default-bar-tab {
+    padding: 0;
+    height: 36px;
+  }
+
+  .searchWrapper {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 24px;
+    padding: 7px 10px;
+    margin: 10px 15px 0 15px;
+    .icon-h5_search {
+      color: #757575;
+      font-size: 14px;
+    }
+    .icon-workflow_cancel {
+      color: #bdbdbd;
+      font-size: 15px;
+    }
+    input {
+      width: 100%;
+      border: 0;
+      padding: 0 5px;
+      background: rgba(0, 0, 0, 0);
+    }
+  }
+
+  .cityPickerContentBox {
+    overflow-y: auto;
+    .popupListBox {
+      padding-left: 16px;
+      .popupListItem {
+        display: flex;
+        align-items: center;
+        &:nth-child(n + 2) .popupListItemContentBox {
+          border-top: 1px solid #EAEAEA;
+        }
+        .ming.Radio {
+          margin-right: initial;
+        }
+        .popupListItemContentBox {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex: 1;
+          padding: 12px 6px 12px 0;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  .CityPicker-input-textCon::-webkit-input-placeholder {
+    color: #bdbdbd;
+    font-size: 13px;
+  }
+  .CityPicker-input-textCon::-moz-placeholder {
+    color: #bdbdbd;
+    font-size: 13px;
+  }
+  .CityPicker-input-textCon::-ms-input-placeholder {
+    color: #bdbdbd;
+    font-size: 13px;
+  }
+  .CityPicker-input-placeholder-Gray3::-webkit-input-placeholder {
+    color: #151515 !important;
+  }
+  .CityPicker-input-placeholder-Gray3::-moz-placeholder {
+    color: #151515 !important;
+  }
+  .CityPicker-input-placeholder-Gray3::-ms-input-placeholder {
+    color: #151515 !important;
+  }
+}

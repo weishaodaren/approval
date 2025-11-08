@@ -1,0 +1,91 @@
+.systemSettingsContainer {
+  flex: 1;
+  min-height: 0;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  padding: 0 40px;
+  .languagueSetting {
+    display: flex;
+    align-items: center;
+    .languagueItem {
+      cursor: pointer;
+      width: 100px;
+      height: 32px;
+      line-height: 30px;
+      text-align: center;
+      border: 1px solid #eaeaea;
+      margin-right: -1px;
+      color: #151515;
+      &:hover {
+        color: #1677ff;
+      }
+      &.active {
+        color: #ffffff;
+        font-weight: bold;
+        background: #1677ff;
+        border-color: #1677ff;
+      }
+      &:first-child {
+        border-radius: 3px 0 0 3px;
+      }
+      &:last-child {
+        border-radius: 0 3px 3px 0;
+      }
+    }
+  }
+  .systemSettingItem {
+    display: flex;
+    padding: 30px 0;
+    border-bottom: 1px solid #eaeaea;
+    .systemSettingsLabel {
+      width: 140px;
+      text-align: left;
+    }
+    .systemSettingsRight {
+      display: flex;
+      flex-direction: column;
+      padding-left: 32px;
+      label {
+        .ant-checkbox-input {
+          display: none;
+        }
+      }
+      .ant-select-selector {
+        width: 180px;
+        height: 36px;
+        .ant-select-selection-item {
+          height: 36px;
+          line-height: 36px;
+        }
+      }
+      .ant-checkbox-wrapper {
+        margin-top: 24px;
+        margin-left: 0;
+      }
+      .RadioGroup--vertical .Radio {
+        margin-bottom: 10px;
+      }
+      .systemSettingsZone {
+        width: 500px;
+        max-width: 600px;
+        .Dropdown--border {
+          height: 32px;
+        }
+        .ming.Menu {
+          width: auto;
+          right: 0;
+        }
+      }
+      .systemSettingsZoneDesc {
+        max-width: 600px;
+        padding: 6px 14px;
+        background: #fbefe0;
+        border-radius: 4px;
+      }
+    }
+  }
+  .borderNoe {
+    border: none;
+  }
+}

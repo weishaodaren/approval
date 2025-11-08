@@ -1,0 +1,73 @@
+.chartBaseColorModal {
+  .colorSwatches {
+    height: 370px;
+    overflow-y: scroll;
+    margin-top: 20px;
+    padding: 6px 0;
+    border-radius: 4px;
+    border: 1px solid #dddddd;
+  }
+  .customSwatches {
+    .colorItem .item {
+      border-radius: 2px;
+    }
+  }
+  .colorItem {
+    cursor: pointer;
+    padding: 6px 10px 6px 19px;
+    .item {
+      height: 30px;
+      width: 40px;
+      &.narrow {
+        width: 24px;
+      }
+    }
+    .colorName {
+      width: 100px;
+    }
+    .wrap {
+      flex-wrap: wrap;
+    }
+    .addWrap {
+      height: 30px;
+      width: 40px;
+      border-radius: 4px;
+      border: 1px solid #e1dcdc;
+    }
+    &.active,
+    &:hover {
+      background-color: #f5f5f5;
+    }
+    &:hover {
+      .icon-done.Visibility {
+        display: none;
+      }
+      .deleteIcon {
+        display: block;
+        &:hover {
+          color: #f44336 !important;
+        }
+      }
+    }
+    .icon-done {
+      color: #1677ff;
+    }
+    .deleteIcon {
+      display: none;
+    }
+  }
+  .hoverText:hover {
+    .icon-add {
+      color: #1677ff !important;
+    }
+    .addWrap {
+      border-color: #1677ff;
+    }
+  }
+  .ant-radio-wrapper {
+    margin-right: 60px;
+  }
+  .ant-radio-input {
+    position: absolute !important;
+  }
+}

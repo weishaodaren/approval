@@ -1,0 +1,39 @@
+.SheetMove {
+  .mui-dialog-body {
+    overflow: hidden;
+  }
+  .empty .value {
+    color: #999;
+  }
+
+  .target {
+    padding: 3px 8px;
+    margin: 0 5px;
+    border-radius: 4px;
+    background: #eaeaea;
+  }
+  .groupingWrap {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    height: 400px;
+    .searchWrap {
+      padding: 0 5px;
+      border-bottom: 1px solid #eaeaea;
+      input {
+        border: none;
+      }
+    }
+    .groupingItem {
+      height: 33px;
+      padding: 0 10px 0 8px;
+      &.active {
+        color: #1677ff;
+        background-color: #e5f3fe;
+        .ellipsis {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

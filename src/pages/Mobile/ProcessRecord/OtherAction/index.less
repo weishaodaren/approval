@@ -1,0 +1,110 @@
+@activeColor: #1677ff;
+@refuseColor: #f44336;
+@passColor: #4caf50;
+@submitColor: #1e88e5;
+
+.otherActionModal {
+  max-height: 95%;
+  overflow-y: auto;
+  width: 100%;
+  background: #fff;
+}
+.otherActionWrapper {
+  max-height: 100vh;
+  .otherActionContent {
+    overflow-y: auto;
+  }
+  .am-textarea-item,
+  .itemWrap {
+    padding: 10px 16px;
+    overflow: initial;
+  }
+  .title {
+    padding: 16px 16px 0;
+  }
+  .itemWrap {
+    .selectedUser {
+      width: 30px;
+      height: 30px;
+    }
+    .icon-lift {
+      color: #ffa340;
+    }
+    .flexEnd {
+      justify-content: flex-end;
+    }
+  }
+  .adm-text-area {
+    border: 1px solid #e3e3e3;
+    padding: 6px;
+    border-radius: 4px;
+    > textarea {
+      font-size: 14px;
+    }
+  }
+  .verifyPasswordInputWrap .label {
+    font-weight: bold;
+  }
+  .attachmentFiles {
+    padding: 0;
+  }
+  .selectTemplate {
+    min-height: 39px;
+    border-radius: 4px;
+    padding: 5px;
+    border: 1px solid #e3e3e3;
+  }
+  .actionBtnWrapper {
+    height: 50px;
+    align-items: center;
+  }
+  .actionBtn {
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    border: 1px solid #dddddd;
+    margin: 0 10px;
+  }
+  .ok {
+    color: #fff;
+    border-color: @activeColor;
+    background-color: @activeColor;
+  }
+  .overrule {
+    color: #fff;
+    border-color: @refuseColor;
+    background-color: @refuseColor;
+  }
+  .signature {
+    width: 100%;
+  }
+  .backFlowNodesHeader {
+    .left,
+    .right {
+      display: flex;
+      color: #1677ff;
+      font-size: 16px;
+      align-items: center;
+    }
+    .am-flexbox-item.left {
+      justify-content: flex-start;
+    }
+    .title {
+      color: #000;
+      font-size: 17px;
+    }
+    .am-flexbox-item.right {
+      justify-content: flex-end;
+    }
+  }
+  .backFlowNodesList {
+    .icon-ok {
+      color: #1677ff;
+    }
+  }
+  .fileWrapper {
+    border-radius: 4px;
+  }
+}

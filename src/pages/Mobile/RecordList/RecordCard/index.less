@@ -1,0 +1,248 @@
+.mobileWorksheetRecordCard {
+  display: flex;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16);
+  position: relative;
+  font-size: 16px;
+  .descBoxInfo {
+    display: none;
+  }
+  &.coverRight {
+    flex-direction: row-reverse;
+    .fill,
+    .full {
+      background-color: #fcfcfc;
+    }
+  }
+  &.converTop {
+    flex-direction: column;
+    .recordCardCover {
+      width: 100% !important;
+      height: 170px;
+    }
+    .recordCardContent {
+      width: 100% !important;
+    }
+  }
+  &.batchOptStyle {
+    border: 1px solid #1677ff;
+  }
+
+  .recordCardCover {
+    width: 100px;
+    .cover {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .withoutImg {
+      height: 100%;
+      justify-content: center;
+    }
+    &.circle {
+      border-radius: unset;
+    }
+    &.circle,
+    &.rectangle {
+      display: flex;
+      justify-content: center;
+      background-color: #fff;
+      width: 70px;
+      .img {
+        height: 70px;
+        margin-top: 10px;
+        border: 1px solid #eaeaea;
+      }
+      .withoutImg {
+        width: 70px;
+        justify-content: center;
+      }
+    }
+    &.circle .img {
+      border-radius: 50%;
+    }
+    &.rectangle .img {
+      border-radius: 5px;
+    }
+    &.fill,
+    &.full {
+      .withoutImg {
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        background-color: #fcfcfc;
+      }
+    }
+    &.full {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &.appshowtype1.fill {
+      width: 100px;
+    }
+    .withoutImg > img {
+      width: 36px;
+    }
+    .coverWrapQr {
+      height: 100% !important;
+    }
+  }
+  .recordCardContent {
+    padding: 10px 12px;
+    width: 0;
+    overflow: hidden;
+    position: relative;
+    .colorTag {
+      position: absolute;
+      width: 4px;
+      top: -1px;
+      bottom: -1px;
+      left: 0px;
+      &.colorTagRight {
+        left: unset;
+        right: 0;
+      }
+    }
+
+    .cellAttachments {
+      width: auto;
+    }
+    .cardContent0 {
+      display: flex;
+      align-items: center;
+      .controlWrapper {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+      }
+      .controlWrapper:nth-child(2) {
+        margin: 0 12px;
+      }
+      .controlContent {
+        height: 30px;
+        // display: flex;
+        // align-items: center;
+      }
+      .cellAttachments .cellAttachment {
+        margin-bottom: 0;
+      }
+    }
+    .cardContent1 {
+      overflow: hidden;
+      .controlContent {
+        flex: 1;
+        overflow: hidden;
+      }
+      .controlWrapper {
+        margin-bottom: 7px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      .controlName {
+        margin-right: 10px;
+      }
+    }
+    .cardContent2 {
+      display: flex;
+      flex-wrap: wrap;
+      .controlWrapper {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        padding-right: 10px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  .controlContent {
+    .editableCellCon {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      vertical-align: top;
+    }
+    .linelimit {
+      display: inherit !important;
+    }
+  }
+  .abstract .editableCellCon {
+    white-space: initial;
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    /* autoprefixer: off */
+    -webkit-box-orient: vertical;
+    /* autoprefixer: on */
+  }
+  .abstract {
+    .editableCellCon {
+      .abstractContent {
+        width: unset !important;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        word-break: break-all;
+        white-space: normal !important;
+      }
+      &.maxLine1 .abstractContent {
+        -webkit-line-clamp: 1 !important;
+      }
+      &.maxLine2 .abstractContent {
+        -webkit-line-clamp: 2 !important;
+      }
+      &.maxLine3 .abstractContent {
+        -webkit-line-clamp: 3 !important;
+      }
+      &.maxLine4 .abstractContent {
+        -webkit-line-clamp: 4 !important;
+      }
+      &.maxLine5 .abstractContent {
+        -webkit-line-clamp: 5 !important;
+      }
+    }
+  }
+
+  .emptyTag {
+    border-radius: 3px;
+    display: inline-block;
+    width: 20px;
+    height: 6px;
+    margin-bottom: 2px;
+    background-color: #ededed;
+  }
+  .batchOptCheck {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    line-height: 18px;
+    border-radius: 50%;
+    background-color: #bdbdbd;
+    color: #fff;
+  }
+  .batchOptChecked {
+    background-color: #1677ff;
+  }
+  .controlWrapper {
+    .controlName {
+      font-size: 0.8em;
+      color: var(--gray-75);
+    }
+    .controlContent {
+      font-size: 0.8em;
+    }
+  }
+}

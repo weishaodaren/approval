@@ -1,0 +1,74 @@
+.ming.Dropdown,
+.dropdownTrigger {
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
+  max-width: 100%;
+
+  .Dropdown--input {
+    padding: 5px 5px 5px 12px;
+    .value {
+      display: inline-block;
+      max-width: 90%;
+      overflow: hidden;
+      vertical-align: middle;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      margin: 0;
+    }
+  }
+
+  .Dropdown--border {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ddd;
+    &:hover,
+    &.active {
+      border-color: #1677ff;
+      .clearIcon {
+        display: inline-block;
+      }
+      .dropArrow {
+        display: none;
+      }
+    }
+    height: 36px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .Dropdown--placeholder {
+    color: #bdbdbd;
+  }
+  .Dropdown--hr {
+    height: 1px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    background: #ddd;
+    &:last-child {
+      display: none;
+    }
+  }
+  &.disabled {
+    background-color: #f5f5f5;
+    .Dropdown--border:hover {
+      border-color: #ccc;
+    }
+    .Dropdown--input {
+      cursor: not-allowed;
+      color: #999;
+    }
+  }
+  .clearIcon {
+    display: none;
+  }
+}
+.dropdownTrigger {
+  position: absolute;
+  z-index: 9999 !important;
+  .ming.Menu {
+    position: relative;
+  }
+}

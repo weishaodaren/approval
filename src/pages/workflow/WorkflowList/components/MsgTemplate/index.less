@@ -1,0 +1,64 @@
+.workflowMsgTemplateDialog {
+  width: 800px !important;
+  height: 80% !important;
+  .mui-dialog-body {
+    overflow: hidden !important;
+    ul {
+      height: 100%;
+    }
+  }
+  .templateTitle {
+    justify-content: space-between;
+    .actBox {
+      .del {
+        margin-right: 24px;
+        padding: 6px 18px;
+        border: 1px solid #eaeaea;
+        &:hover {
+          color: #fff;
+          background: #1677ff;
+          border: 1px solid #1677ff;
+        }
+      }
+    }
+  }
+  .workflowMsgTemplateScrollView {
+    height: calc(~'100% - 40px');
+  }
+  li {
+    display: flex;
+    &.header {
+      line-height: 36px;
+      color: #757575;
+      background-color: #f4f4f4;
+    }
+    &.templates {
+      border-bottom: 1px solid #ddd;
+      padding: 16px 0;
+    }
+    .type {
+      width: 80px;
+      text-align: center;
+    }
+    .content {
+      flex-wrap: wrap;
+      color: #000;
+      padding-left: 12px;
+      overflow: hidden;
+    }
+    .status {
+      width: 120px;
+      padding: 0 20px;
+    }
+    .msgTemplateCreateTime {
+      width: 180px;
+      &.theneColor {
+        color: #1677ff;
+      }
+    }
+  }
+  .workflowMsgTemplateEmpty {
+    margin-top: 150px;
+    border: none !important;
+  }
+}

@@ -1,0 +1,232 @@
+.childTableEmptyTag {
+  border-radius: 6px;
+  width: 22px;
+  height: 6px;
+  background-color: #eaeaea;
+  margin: 15px 0;
+}
+.childTableCon {
+  line-height: 1.5715;
+  margin: 2px 0 12px;
+  min-height: 74px;
+  .operates {
+    position: absolute;
+    right: 0px;
+    top: 8px;
+    display: flex;
+    align-items: center;
+    &.isMobile {
+      top: -34px;
+    }
+  }
+  .selectedTip {
+    position: absolute;
+    left: 0px;
+    top: -36px;
+    line-height: 36px;
+    font-weight: 500;
+    color: #151515;
+    background-color: #fff;
+    font-size: 16px;
+    width: 100%;
+    z-index: 2;
+  }
+  .errorTip {
+    width: 100%;
+    color: #f32121;
+    font-size: 13px;
+    position: absolute;
+    top: -26px;
+    background: #fff;
+    z-index: 1;
+  }
+  .childTableColumnHead {
+    color: #9e9e9e !important;
+    font-size: 13px;
+    line-height: 34px;
+  }
+  .sheetViewTable {
+    position: relative;
+    background-color: transparent;
+    .cell:not(.columnHead) {
+      &.control-31, // FORMULA_NUMBER 公式
+      &.control-38, // FORMULA_DATE 公式
+      &.control-37, // SUBTOTAL 汇总
+      &.control-30, // SHEET_FIELD 他表字段
+      &.control-33, // AUTO_ID 自动编号
+      &.control-32, // CONCATENATE  文本组合
+      &.control-10010, // REMARK  备注
+      &.control-25 // MONEY_CN 大写金额
+      {
+        background-color: #f5f5f5 !important;
+      }
+    }
+    .cell.readonly {
+      background-color: #f5f5f5 !important;
+    }
+  }
+  .operate {
+    margin: 0 0 12px;
+    display: flex;
+    align-items: center;
+    .operateButton,
+    .addRowByLine,
+    .importFromFile,
+    .addRowByDialog {
+      font-weight: bold;
+      border-radius: 4px;
+      margin-right: 8px;
+      color: #151515;
+      cursor: pointer;
+      padding: 0 16px;
+      font-size: 13px;
+      height: 36px;
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid #dddddd;
+      .icon {
+        color: #9e9e9e;
+      }
+      &.disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        background: transparent;
+      }
+      &.h5,
+      &.h5:not(.disabled):hover {
+        margin: 4px 0 0;
+        background-color: transparent;
+      }
+    }
+    .splitter {
+      width: 0;
+      height: 18px;
+      border-right: 1px solid #ddd;
+      margin: 0 17px 0 9px;
+    }
+    .importFromFile {
+      display: inline-flex;
+      justify-content: center;
+      z-index: 1;
+      opacity: 1 !important;
+      padding: 0;
+      .content {
+        line-height: 34px;
+        border-radius: 4px 0 0 4px;
+      }
+      .icon-file_upload {
+        margin: 0 10px;
+      }
+      .content:hover,
+      .dropdownButtonIcon:hover {
+        background-color: #f5f5f5;
+      }
+      &.disabled {
+        border-color: rgba(221, 221, 221, 0.6);
+        i.icon {
+          opacity: 0.6;
+        }
+      }
+    }
+    .addRowByLine:not(.disabled):hover,
+    .exitBatch:not(.disabled):hover {
+      background-color: #f5f5f5;
+    }
+    .addRowByDialog {
+      &:not(.disabled):hover {
+        background-color: #f5f5f5;
+      }
+    }
+  }
+}
+
+.childTableRowDetailDialog {
+  padding: 0 !important;
+  .ant-modal-close {
+    display: none;
+  }
+  .ant-modal-body {
+    padding: 0px !important;
+  }
+  .header {
+    padding: 10px 0 30px;
+    .switchButton {
+      padding: 0 16px;
+      margin-right: 8px;
+      .icon {
+        font-size: 16px;
+        margin-right: 6px;
+        vertical-align: middle;
+      }
+      .text {
+        vertical-align: middle;
+      }
+    }
+    .headerBtn {
+      margin: 4px 0 0 8px;
+      &.delete:hover {
+        color: #f44336 !important;
+      }
+      &:last-child {
+        margin-right: -6px;
+      }
+    }
+    &.new {
+      padding-bottom: 10px;
+      .title {
+        margin-bottom: 0px;
+      }
+    }
+  }
+  .title {
+    color: #151515;
+    font-size: 20px;
+    line-height: 1em;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  .rowDetailCon {
+    padding: 0 24px 14px;
+    overflow: auto;
+  }
+  .footer {
+    height: 36px;
+    .saveAndContinueBtn {
+      color: #757575;
+      background: #fff;
+      border: 1px solid #bdbdbd;
+      line-height: 34px;
+      &:hover {
+        color: #1677ff;
+        border-color: #1677ff;
+      }
+    }
+  }
+}
+
+.childTableRowDetailMobileDialog {
+  .forCon {
+    overflow-y: auto;
+    padding: 5px 20px 0;
+  }
+  .header {
+    padding: 15px 20px 8px;
+  }
+  .btnsWrapper {
+    height: 50px;
+    border-top: 1px solid #f5f5f5;
+    background-color: #fff;
+    padding: 0 10px;
+    box-sizing: border-box;
+
+    .flexRow {
+      justify-content: flex-end;
+    }
+  }
+  .switchWrapper {
+    border: none !important;
+  }
+  .customFormLine {
+    display: none !important;
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "plugins": [
+    "@babel/plugin-transform-runtime",
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    [
+      "import",
+      {
+        "libraryName": "ming-ui/functions",
+        "libraryDirectory": "",
+        "camel2DashComponentName": false
+      },
+      "import-ming-ui-functions"
+    ],
+    [
+      "import",
+      {
+        "libraryName": "ming-ui",
+        "libraryDirectory": "components",
+        "camel2DashComponentName": false
+      },
+      "import-ming-ui"
+    ],
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "libraryDirectory": "es",
+        "style": "css"
+      },
+      "import-antd"
+    ]
+  ],
+  "env": {
+    "development": {
+      "plugins": ["babel-plugin-dynamic-import-node"],
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "modules": false,
+            "targets": {
+              "browsers": ["last 2 versions"]
+            }
+          }
+        ],
+        "@babel/preset-react"
+      ]
+    },
+    "production": {
+      "plugins": ["@babel/plugin-syntax-dynamic-import"],
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "modules": false,
+            "targets": {
+              "browsers": ["> 0.6% in CN"]
+            }
+          }
+        ],
+        "@babel/preset-react"
+      ]
+    }
+  }
+}

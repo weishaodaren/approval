@@ -1,0 +1,277 @@
+@color333: #151515;
+
+.monitorContainer {
+  border-radius: 4px;
+  background: #fff;
+  padding: 20px 24px 16px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  .spaceBetween {
+    justify-content: space-between;
+    padding-top: 32px;
+  }
+  .subTitle {
+    font-size: 17px;
+    font-weight: 600;
+    color: @color333;
+  }
+  .chartBox {
+    height: 280px;
+    margin-bottom: -16px;
+  }
+  .justifyInfo {
+    margin-top: 16px;
+    .infoBox {
+      height: 124px;
+      margin-right: 25px;
+      background-color: #fafafa;
+      text-align: center;
+      padding-top: 23px;
+      .description {
+        font-size: 13px;
+        color: #757575;
+        font-weight: 600;
+      }
+      .countValue {
+        font-size: 32px;
+        color: @color333;
+        height: 32px;
+        margin-bottom: 12px;
+      }
+      .inTime {
+        font-size: 13px;
+        color: #757575;
+      }
+    }
+    .infoBox:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .selectDate {
+    width: 220px;
+  }
+  .searchFlow {
+    width: 220px;
+    height: 32px;
+  }
+  .searchIcon {
+    color: #9d9d9d;
+  }
+  .loadingWrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    z-index: 1;
+    padding-top: 100px;
+  }
+  .historyStatistics {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .checkHistoryWrap {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background: #fff9f2;
+    border: 1px solid #ff9300;
+    padding-left: 15px;
+    margin-top: 5px;
+    border-radius: 3px;
+  }
+  .listContent {
+    .columnWidth170 {
+      width: 120px;
+    }
+    .columnWidth150 {
+      width: 150px;
+    }
+    .columnWidth80 {
+      width: 80px;
+    }
+    .detailListHeader {
+      height: 55px;
+      line-height: 55px;
+      border-bottom: 1px solid #e7e7e7;
+      .headerItem {
+        font-size: 13px;
+        color: #151515;
+        .manageListOrder {
+          cursor: pointer;
+          transform: scale(0.8);
+          color: #bfbfbf;
+          margin: 14px 0 0 6px;
+          .icon-arrow-down {
+            margin-top: -4px;
+          }
+        }
+      }
+      .flexDirection {
+        flex-direction: row-reverse;
+      }
+      .orderTitleHover:hover {
+        color: #1e88e5;
+      }
+    }
+    .detailListBody {
+      .row {
+        height: 55px;
+        align-items: center;
+        border-bottom: 1px solid #e7e7e7;
+        .cloumnItem {
+          font-size: 14px;
+          font-weight: 400;
+          color: #151515;
+          justify-content: center;
+          align-items: center;
+          .iconWrap {
+            margin-right: 17px;
+            &.unable {
+              background-color: #bdbdbd !important;
+            }
+            width: 24px;
+            height: 24px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .icon {
+              font-size: 16px;
+              color: #fff;
+            }
+          }
+          .checkFlow {
+            display: none;
+            margin-right: 15px;
+          }
+          .flowInfo {
+            width: calc(~'100% - 42px');
+            .flowName {
+              color: #151515;
+            }
+          }
+          .runWaitInfo {
+            color: #757575;
+            margin-left: 5px;
+          }
+          .waitText {
+            width: 100%;
+            display: inline-block;
+            text-align: right;
+          }
+          &.textalignR {
+            text-align: right;
+          }
+          .dot {
+            width: 6px;
+            height: 6px;
+            display: inline-block;
+            border-radius: 50%;
+          }
+        }
+      }
+      .row:hover {
+        background-color: #f8f8f8;
+        .cloumnItem {
+          .flowInfo {
+            .flowName {
+              color: #1677ff;
+            }
+          }
+        }
+        .iconWrap {
+          display: none;
+        }
+        .checkFlow {
+          display: inline-block;
+        }
+      }
+      .row.checked {
+        background-color: #e6f7ff;
+        .iconWrap {
+          display: none;
+        }
+        .checkFlow {
+          display: inline-block;
+        }
+      }
+    }
+    .Hover_1f:hover {
+      i {
+        color: #1f95f2;
+      }
+    }
+    .emptyBox {
+      margin-bottom: 15px;
+      height: 100%;
+      align-items: center;
+      font-size: 15px;
+      font-weight: 700;
+      color: #757575;
+      padding-top: 48px;
+      .emptyIcon {
+        width: 90px;
+        height: 90px;
+        background-color: #f5f5f5;
+        border-radius: 50%;
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & > i {
+          color: #c4c4c4;
+        }
+      }
+    }
+  }
+  .LineHeight54 {
+    line-height: 54px;
+  }
+  .g2TooltipWrap {
+    min-width: 87px !important;
+  }
+}
+
+.runoOperateBox {
+  background: #fff;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.16);
+  width: 240px;
+  padding: 6px 0;
+  .runDateItem {
+    line-height: 32px;
+    color: #151515;
+    padding: 0 20px;
+  }
+  .runDateItem:hover {
+    background-color: #1677ff;
+    color: #fff;
+  }
+}
+
+.timeIcon {
+  color: #757575;
+}
+.timeIcon:hover {
+  color: #1677ff;
+}
+.passageTooltip {
+  .Tooltip-wrapper {
+    max-width: 395px;
+  }
+}
+.queueTooltip {
+  .abandon {
+    color: #f51744;
+  }
+}
+.queueTimeInfo {
+  display: inline-block;
+  width: 20px;
+  text-align: right;
+}

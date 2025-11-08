@@ -1,0 +1,135 @@
+.accountChartContainer {
+  flex: 1;
+  min-height: 0;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  padding: 24px 40px;
+  overflow-x: hidden;
+  border-radius: 4px;
+
+  .Hidden {
+    display: none !important;
+  }
+
+  .initPasswordWarning {
+    width: 100%;
+    height: 39px;
+    background: rgba(245, 23, 68, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 18px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+
+    .warnColor {
+      color: #f51744;
+    }
+  }
+
+  .weiBindColor {
+    color: #1ec563;
+  }
+
+  .qqBindColor {
+    color: #089eff;
+  }
+
+  .workBindColor {
+    color: #1677ff;
+  }
+
+  .accountRowItem {
+    display: flex;
+    align-items: center;
+    height: 71px;
+    border-bottom: 1px solid #eaeaea;
+    box-sizing: border-box;
+    position: relative;
+
+    .redDot {
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  .accountLabel {
+    width: 160px;
+    text-align: left;
+  }
+
+  .logout {
+    color: #f51744;
+  }
+
+  label {
+    .ant-checkbox-input {
+      display: none;
+    }
+  }
+
+  .accountJoinFrirndBox {
+    .ant-select-selector {
+      width: 180px;
+      height: 36px;
+
+      .ant-select-selection-item {
+        height: 36px;
+        line-height: 36px;
+      }
+    }
+  }
+
+  .ant-checkbox-wrapper {
+    margin-top: 12px;
+    margin-left: 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.editPasswordDialogId {
+  .editPasswordDialogBtn {
+    width: 92px;
+    height: 36px;
+    border-radius: 18px;
+  }
+}
+
+.bindingWrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  .bingingItem {
+    width: 200px;
+    background: #f5f5f5;
+    border-radius: 4px;
+    padding: 0 12px;
+    height: 40px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+
+    .iconImg {
+      width: 22px;
+      height: 22px;
+    }
+    .googleImg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .Hover_red:hover {
+      color: #f00 !important;
+    }
+  }
+}
+
+.splitLine {
+  width: 100%;
+  height: 0px;
+  border-top: 1px solid #eaeaea;
+}

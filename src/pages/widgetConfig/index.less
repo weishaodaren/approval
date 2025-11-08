@@ -1,0 +1,85 @@
+body {
+  overflow: hidden;
+}
+.customWidgetContainer {
+  display: flex;
+  height: 100%;
+  padding-top: 50px;
+  position: relative;
+  overflow: hidden;
+}
+.displayItemTransition-enter {
+  opacity: 0.01;
+}
+
+.displayItemTransition-enter.displayItemTransition-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.displayItemTransition-leave {
+  opacity: 1;
+}
+
+.displayItemTransition-leave.displayItemTransition-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+.assignValueBody {
+  overflow-x: hidden !important;
+  padding: 0 !important;
+  padding-bottom: 20px !important;
+}
+
+.scoreSwitchScoreConfirm {
+  .ant-modal-body {
+    padding: 20px 24px;
+  }
+}
+
+.tipsIcon {
+  margin-left: 4px;
+}
+
+.textRegexpVerifyDialog {
+  .mui-dialog-header {
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+.subListSortCondition {
+  .itemText {
+    padding-left: 16px;
+  }
+}
+
+.dynamicTimePanel {
+  .TimePicker-panel-container {
+    margin-top: 38px;
+  }
+  .TimePicker-panel-input-container {
+    display: none;
+  }
+  .TimePicker-panel-item {
+    width: 70px;
+  }
+  .TimePicker-input-container .ThemeHoverColor3:hover {
+    color: #151515 !important;
+  }
+}
+
+.DialogWidgetConfig {
+  overflow: hidden;
+  z-index: 1001;
+  .mui-dialog-header {
+    display: none;
+  }
+  .mui-dialog-body {
+    padding: 0 !important;
+    position: relative;
+    .customHeadBox .tabs {
+      display: none;
+    }
+  }
+}

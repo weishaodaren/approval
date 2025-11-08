@@ -1,0 +1,180 @@
+.discussLogFile {
+  width: 400px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #f5f5f5;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+  flex-direction: column;
+  border-left: 1px solid #ddd;
+  box-sizing: border-box;
+  .UploadFiles-ramSize {
+    display: none;
+  }
+  .header {
+    height: 55px;
+    border-bottom: 1px solid #ccc;
+    padding-top: 24px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    & > span {
+      display: inline-block;
+      color: #9e9e9e;
+      cursor: pointer;
+      padding: 0 8px;
+      line-height: 28px;
+      .txt {
+        padding: 0 5px;
+        border-bottom: 3px solid transparent;
+      }
+    }
+    .talk {
+      padding-left: 0;
+    }
+    & > .isWorksheetDiscuss {
+      padding: 0 !important;
+      & > span {
+        padding: 0 !important;
+        font-size: 18px !important;
+      }
+    }
+  }
+  .body {
+    background: #fafafa;
+    flex-shrink: 0;
+    min-height: 0;
+    .talkBox {
+      width: 100%;
+      height: 100%;
+      .workSheetCommentBox {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        .commentListBox {
+          .commentList {
+            margin: 0 !important;
+            .mdEmotion {
+              left: -13px !important;
+              .arrow {
+                left: 97px !important;
+              }
+            }
+          }
+        }
+        .WorkSheetCommentList {
+          padding: 12px 16px;
+          .commentFilterBtn {
+            padding: 8px 12px;
+            color: #151515;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            width: fit-content;
+            cursor: pointer;
+            border-radius: 3px;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            &:hover {
+              box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+            }
+            &.isActive {
+              color: #1677ff;
+            }
+            .searchInput {
+              width: 100%;
+              height: 20px;
+              border: none;
+              font-size: 13px;
+              padding: 0px 12px 0 4px !important;
+            }
+            &.searchBtn {
+              padding: 8px;
+            }
+          }
+        }
+        .commentEmpty {
+          text-align: center;
+          padding-top: 120px;
+          padding-bottom: 10px;
+        }
+        .commentList {
+          flex: 1;
+          margin: 0 24px;
+          .talkDiscussion {
+            border-bottom: 0;
+          }
+        }
+        .comment {
+          position: relative;
+          border-radius: 0 0 3px 0;
+          padding: 10px 20px 10px 60px;
+          background: #fafafa;
+          .createHeadImg {
+            position: absolute;
+            left: 16px;
+            top: 10px;
+          }
+          .commentBox {
+            flex: 1;
+            width: 100%;
+            display: inline-block;
+            vertical-align: middle;
+            background: #fff;
+            border-color: #ddd;
+            position: relative;
+            .mdEmotion {
+              .arrow {
+                left: 106px !important;
+              }
+            }
+            .mentionsTriggerWrap,
+            .mentionsAutocompleteList {
+              width: 100% !important;
+            }
+          }
+          .commentBox.autoHeight {
+            background: #fff;
+            .mentions-input-box {
+              background: #fff;
+            }
+          }
+        }
+      }
+    }
+    .fileContentBox {
+      width: 100%;
+      height: 100%;
+      .UploadFiles-wrapper {
+        padding-left: 16px;
+        padding-right: 21px;
+      }
+      .noneContent {
+        padding-left: 25px;
+      }
+      .fileContent > div.TxtRight {
+        margin-top: 18px;
+        margin-bottom: 24px;
+        .Button--primary {
+          margin-right: 24px;
+        }
+      }
+      .fileContent > div.TxtRight {
+        margin-top: 18px;
+        margin-bottom: 24px;
+        .Button--primary {
+          margin-right: 24px;
+        }
+      }
+    }
+  }
+}
+
+.isPublicApp .discussLogFile {
+  .commentBox {
+    pointer-events: none;
+  }
+  .fileContent {
+    display: none;
+  }
+}

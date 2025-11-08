@@ -1,0 +1,151 @@
+#app,
+html,
+body {
+  height: 100%;
+  padding-bottom: calc(~'constant(safe-area-inset-bottom) - 20px');
+  padding-bottom: calc(~'env(safe-area-inset-bottom) - 20px');
+}
+
+:root:root {
+  --adm-color-primary: #1677ff;
+  .adm-button {
+    height: 36px;
+    --border-radius: 18px;
+  }
+}
+
+input {
+  background-color: #fff;
+}
+input::placeholder {
+  color: #bdbdbd;
+}
+
+.adm-action-sheet {
+  .header {
+    width: 100%;
+    line-height: 24px;
+    justify-content: space-between;
+    color: #9e9e9e;
+    .closeIcon {
+      width: 24px;
+      border-radius: 12px;
+      background-color: #e6e6e6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .adm-action-sheet-button-list {
+    padding-bottom: 10px;
+  }
+  .adm-action-sheet-extra {
+    justify-content: flex-start;
+    padding: 10px 15px;
+    border-bottom: none;
+  }
+  .adm-action-sheet-button-item-wrapper {
+    border-bottom: none;
+  }
+  .adm-action-sheet-button-item {
+    text-align: left;
+    padding: 12px 15px;
+    .adm-action-sheet-button-item-name {
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.md-adm-tabs.adm-tabs {
+  --title-font-size: 15px;
+  --active-line-height: 4px;
+  --fixed-active-line-width: 16px;
+  &.flexUnset {
+    .adm-tabs-tab-wrapper {
+      flex: unset;
+    }
+  }
+  .adm-tabs-tab-line {
+    bottom: 2px;
+  }
+}
+
+.md-adm-actionSheet.adm-action-sheet-popup {
+  .adm-action-sheet-extra {
+    padding: 10px 20px 6px !important;
+  }
+}
+
+.actionSheetModal {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden;
+}
+
+.mobileActionSheetList {
+  .actionHandleList {
+    max-height: 500px;
+    overflow: auto;
+  }
+  .am-list-item {
+    padding-left: 0;
+  }
+  .am-list-content {
+    text-align: center !important;
+  }
+  .delete .am-list-content {
+    color: red !important;
+  }
+  .am-whitespace {
+    background-color: #ededed;
+  }
+  .disabled .am-list-content {
+    color: #15151580 !important;
+  }
+}
+
+.mobileModal {
+  &.full .adm-popup-body-position-bottom {
+    height: 100%;
+  }
+  &.minFull .adm-popup-body-position-bottom {
+    height: 95%;
+  }
+  &.topRadius .adm-popup-body-position-bottom {
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    overflow: hidden;
+  }
+  .adm-popup-body-position-bottom {
+    padding-bottom: calc(~'constant(safe-area-inset-bottom) - 20px') !important;
+    padding-bottom: calc(~'env(safe-area-inset-bottom) - 20px') !important;
+  }
+  .header {
+    justify-content: space-between;
+    padding: 15px 15px 20px;
+    color: #9e9e9e;
+    .closeIcon {
+      width: 24px;
+      border-radius: 12px;
+      background-color: #e6e6e6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.mobilePopup {
+  // 选择人员、部门，弹窗距离顶部40px
+  .heightPopupBody40 {
+    height: calc(~'100% - 40px');
+    .popupWrapper {
+      height: 100%;
+      .popupContentBox {
+        height: calc(~'100% - 44px');
+      }
+    }
+  }
+}

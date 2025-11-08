@@ -1,0 +1,809 @@
+.worksheetCellPureString {
+  vertical-align: middle;
+}
+
+.worksheetRowTitle {
+  display: inline-block;
+}
+.cellControl {
+  font-size: 13px;
+}
+.cellDropdown {
+  display: inline-block;
+  line-height: 21px;
+  max-width: 100px;
+  vertical-align: middle;
+  margin-right: 10px;
+  padding: 0 9px;
+  border-radius: 40px;
+  color: #4d4d4d;
+  background-color: rgba(0, 100, 240, 0.08);
+}
+
+.cellOptions {
+  display: inline-block;
+  .cellOption {
+    display: inline-block;
+    margin: 0 4px 4px 0;
+    padding: 0 8px;
+    line-height: 21px;
+    vertical-align: middle;
+    border-radius: 40px;
+    color: #4d4d4d;
+    background-color: rgba(80, 120, 150, 0.08);
+    .deleteIcon {
+      color: rgba(0, 0, 0, 0.7);
+      &:hover {
+        color: rgba(0, 0, 0, 1);
+      }
+    }
+    &.colored {
+      .deleteIcon {
+        color: rgba(255, 255, 255, 0.7);
+        &:hover {
+          color: rgba(255, 255, 255, 1);
+        }
+      }
+    }
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+  .editIcon {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 34px;
+    height: 34px;
+    text-align: center;
+    line-height: 34px;
+  }
+}
+
+.cellOptionsDropdown {
+  .MenuItem {
+    height: 36px;
+    line-height: 36px;
+
+    .Item-content:not(.disabled):hover {
+      background: #f2f2f2 !important;
+      color: #151515 !important;
+    }
+  }
+}
+
+.cellControlOptionsRadio,
+.cellControlOptionsCheckbox {
+  .RadioGroupCon {
+    display: flex;
+    flex-wrap: wrap;
+    .Radio {
+      margin-bottom: 6px;
+    }
+  }
+  .CheckboxGroup {
+    display: flex;
+    flex-wrap: wrap;
+    > .flexColumn.w100 {
+      display: none;
+    }
+    .Checkbox {
+      margin-right: 20px;
+      margin-bottom: 6px;
+    }
+  }
+  .otherInputBox,
+  .cellControlOptionsCheckbox {
+    display: none;
+  }
+}
+
+.cellRelation {
+  display: inline-block;
+  .relationIcon {
+    img {
+      width: 22px;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+  }
+}
+
+// 等级
+.levelWrapper {
+  .Score-wrapper {
+    width: auto;
+    display: inline-flex !important;
+    flex-wrap: nowrap !important;
+  }
+  &:not(.canedit) {
+    .StarScore-item,
+    .LineScore-item {
+      cursor: default;
+    }
+  }
+  &.isInCard {
+    .Score-wrapper {
+      width: auto;
+      display: block !important;
+      .StarScore-item {
+        display: inline-block;
+        i {
+          font-size: 16px !important;
+        }
+      }
+      .text {
+        display: inline-block;
+        line-height: 13px !important;
+      }
+    }
+  }
+}
+
+// 关联
+.cellRelations {
+  display: inline-block;
+  &.common {
+    .cellRelation {
+      display: inline-block;
+      width: 100%;
+      color: inherit !important;
+      .relatioName {
+        color: #151515;
+      }
+    }
+  }
+  &.land {
+    width: 100%;
+    .cellRelation {
+      display: flex;
+      width: 100%;
+      border: solid 1px #ccc;
+      border-radius: 3px;
+      line-height: 36px;
+      margin: 5px 0;
+      .cellRelationIcon {
+        i {
+          font-size: 16px;
+          color: #9e9e9e;
+          padding: 0 10px;
+          line-height: 36px;
+        }
+      }
+      .relationName {
+        flex: 1;
+        color: inherit;
+        text-decoration: none;
+      }
+      .chargeAccount {
+        margin: 6px;
+      }
+    }
+  }
+}
+
+// 部门
+.cellDepartments {
+  display: inline-block;
+  .cellDepartment {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 4px;
+    font-size: 13px;
+    color: #151515;
+    background-color: rgba(80, 120, 150, 0.08);
+    height: 21px;
+    line-height: 21px;
+    margin-right: 6px;
+    border-radius: 13px;
+    padding: 0 8px;
+    &.isDelete {
+      .iconWrap {
+        background-color: #9e9e9e !important;
+      }
+      .departmentName {
+        color: #757575;
+      }
+    }
+    .iconWrap {
+      width: 21px;
+      height: 21px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 21px;
+      color: #fff;
+    }
+    i {
+      line-height: 21px;
+    }
+    .icon-close {
+      &:hover {
+        color: #757575 !important;
+      }
+    }
+  }
+}
+
+// 人员
+.cellUsers {
+  display: inline-block;
+  .cellUser {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 4px;
+    font-size: 13px;
+    color: #151515;
+    background-color: rgba(80, 120, 150, 0.08);
+    padding-right: 8px;
+    height: 21px;
+    line-height: 21px;
+    margin-right: 6px;
+    border-radius: 13px;
+    .icon-close {
+      line-height: 22px;
+      &:hover {
+        color: #757575 !important;
+      }
+    }
+  }
+  .cellUserHead {
+    display: inline-block !important;
+    box-sizing: content-box;
+    border-radius: 50%;
+    line-height: 1em;
+  }
+  .userName {
+    max-width: 200px;
+  }
+  .userName,
+  .userNum {
+    margin-left: 6px;
+  }
+}
+
+.cellRelateWorksheets {
+  .cellRelateWorksheetRecord {
+    display: inline-block;
+    margin-bottom: 4px;
+    margin-right: 10px;
+    padding: 0px 8px 0 6px;
+    background-color: rgba(0, 100, 240, 0.08);
+    border-radius: 4px;
+    line-height: 21px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    .icon {
+      color: #9e9e9e !important;
+      font-size: 14px;
+      margin-right: 2px;
+    }
+    &.mutiple {
+      padding: 0px 6px;
+    }
+  }
+}
+
+.cellRelateWorksheetColumn {
+  .worksheetCellPureString {
+    min-width: auto;
+    max-width: 130px;
+  }
+}
+
+// 关联记录
+.cellRelateRecord.cell {
+  padding: 0 !important;
+}
+
+.cellRelateRecordMultiple {
+  display: inline-block;
+  background-color: rgba(0, 100, 240, 0.08);
+  border-radius: 3px;
+  height: 21px;
+  line-height: 21px;
+  padding: 0 6px;
+  font-size: 13px;
+  .icon {
+    font-size: 16px;
+    color: #9d9d9d;
+    margin-right: 5px;
+    position: relative;
+    top: 2px;
+  }
+  &.allowOpenList {
+    cursor: pointer;
+    &:hover {
+      color: #1677ff;
+      .icon {
+        color: #1677ff;
+      }
+      background-color: rgba(33, 150, 243, 0.16);
+    }
+  }
+}
+
+.cellSwitch {
+  display: inline-block;
+  vertical-align: middle;
+  .mobileFormSwitchDisabled {
+    opacity: 0.4;
+    &.ming.Switch--off {
+      background-color: #ccc !important;
+    }
+    &.ming.Switch--on {
+      background: #01ca83 !important;
+    }
+  }
+  .ming.Checkbox {
+    .Checkbox-box {
+      margin-top: 0px !important;
+      border: 1px solid #bdbdbd;
+      margin-right: 0px;
+    }
+    &.checked {
+      .Checkbox-box {
+        border: 1px solid transparent;
+      }
+    }
+  }
+}
+
+.cellControlCascader.cell {
+  .customCascaderInput {
+    width: 100%;
+    height: 100%;
+    padding: 0 6px !important;
+    border: none;
+    &:focus {
+      box-shadow: inset 0 0 0 2px #2d7ff9 !important;
+    }
+  }
+  .ant-select-selector {
+    border: none !important;
+    box-shadow: none !important;
+    font-size: 13px !important;
+    box-shadow: inset 0 0 0 2px #2d7ff9 !important;
+    height: 33px !important;
+    .ant-select-selection-search-input {
+      padding-left: 0px !important;
+    }
+    .ant-select-selection-item {
+      line-height: 34px !important;
+    }
+  }
+  .customCascader {
+    .ant-cascader-input {
+      border: none !important;
+    }
+  }
+  &.isediting {
+    padding: 0 !important;
+  }
+}
+
+.control-10,
+.control-11 {
+  &:not(.columnHead) {
+    padding: 6.5px 6px !important;
+  }
+}
+.control-14,
+.control-27,
+.control-42 {
+  &:not(.columnHead) {
+    padding: 5px 6px !important;
+  }
+}
+.control-26,
+.control-27,
+.control-34,
+.control-36 {
+  &:not(.columnHead) {
+    padding: 6px 6px !important;
+  }
+}
+
+.control-6, // 数值
+.control-8, // 金额
+.control-31, // 公式
+.control-38, // 日期公式
+.control-7 {
+  // 汇总
+  > div.worksheetCellPureString {
+    white-space: nowrap;
+  }
+}
+
+.control-2,
+.control-32 {
+  // 文本
+  .worksheetCellPureString {
+    white-space: break-spaces;
+  }
+}
+
+.control-operates {
+  padding: 3px 10px !important;
+}
+
+.cell.singleLine {
+  white-space: nowrap;
+  padding-right: 6px !important;
+  .cellOptions,
+  .cellDepartments,
+  .cellUsers,
+  .RelateRecordDropdown {
+    overflow: hidden;
+    width: 100%;
+  }
+  .cellControlOptionsRadio,
+  .cellControlOptionsCheckbox {
+    .RadioGroupCon {
+      flex-wrap: nowrap;
+    }
+    .CheckboxGroup {
+      flex-wrap: nowrap;
+    }
+  }
+}
+
+.cell.alignRight:not(.columnHead) {
+  text-align: right;
+}
+.cell.alignCenter {
+  text-align: center;
+}
+
+.linelimit,
+.linelimitcomp:not(.singleLine) {
+  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /*! autoprefixer: off */
+  -webkit-box-orient: vertical;
+  /* autoprefixer: on */
+}
+
+.rowHeight-1 .linelimit {
+  -webkit-line-clamp: 2 !important;
+}
+
+.rowHeight-2 .linelimit {
+  -webkit-line-clamp: 4 !important;
+}
+
+.rowHeight-3 .linelimit {
+  -webkit-line-clamp: 6 !important;
+}
+
+.rowHeight-1 .linelimitcomp {
+  -webkit-line-clamp: 2 !important;
+}
+
+.rowHeight-2 .linelimitcomp {
+  -webkit-line-clamp: 3 !important;
+}
+
+.rowHeight-3 .linelimitcomp {
+  -webkit-line-clamp: 6 !important;
+}
+
+.textControlInput {
+  background-color: #fff;
+  input {
+    width: 100%;
+    font-size: 13px;
+    height: 34px;
+    line-height: 34px;
+    box-sizing: border-box;
+    border: none;
+    background-color: transparent;
+    padding: 0 6px;
+  }
+}
+
+.textControlTextArea {
+  font-size: 13px !important;
+  padding: 7px 6px !important;
+  box-sizing: border-box !important;
+  border: none !important;
+  resize: none !important;
+  line-height: 1.5em;
+  &.isMultipleLine {
+    padding-bottom: 24px !important;
+  }
+}
+
+.cellControlRichTextDialog {
+  .mdEditorFooter {
+    transform: translate(0px, 15px);
+  }
+}
+
+.cellControlAreaPopup {
+  .CityPicker.level-1 {
+    height: 409px;
+  }
+}
+
+.cellControlArea {
+  .clearBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #9e9e9e;
+    cursor: pointer;
+    display: none;
+    &:hover {
+      color: #666;
+    }
+  }
+  &:hover {
+    .clearBtn {
+      display: inline-block;
+    }
+  }
+}
+.cellControlDepartmentPopup,
+.cellControlUserPopup {
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: #fff;
+  padding: 6px 6px;
+  min-height: 36px;
+  .addUserBtn {
+    cursor: pointer;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 21px;
+    height: 21px;
+    line-height: 21px;
+    text-align: center;
+    border-radius: 21px;
+    border: 1px solid #ddd;
+  }
+}
+
+.cellEditMask {
+  opacity: 0;
+}
+
+.cellControlMobilePhoneEdit {
+  font-size: 13px;
+  input {
+    border: none;
+    width: 100%;
+  }
+  .customFormControlTel {
+    .iti__selected-country {
+      display: none;
+    }
+    .cellMobileInput {
+      padding-left: 6px !important;
+      padding-top: 2px !important;
+    }
+  }
+  .cellMobileInput {
+    background: transparent;
+  }
+}
+
+.cellControlErrorTip {
+  position: absolute;
+  white-space: nowrap;
+  top: -26px;
+  padding: 0 8px;
+  height: 26px;
+  line-height: 26px;
+  font-size: 12px;
+  color: #fff;
+  background-color: #f44336;
+}
+
+.cellControlOptionsPopup {
+  position: relative;
+  * {
+    transition: none !important;
+    animation-duration: 0s !important;
+  }
+  .ant-select {
+    .ant-select-clear {
+      z-index: 2 !important;
+      opacity: 1 !important;
+    }
+  }
+  .ant-select-selector {
+    z-index: 2;
+    border: none !important;
+    box-shadow: none !important;
+    font-size: 13px !important;
+    box-shadow: inset 0 0 0 2px #2d7ff9 !important;
+    padding: 0 6px !important;
+    min-height: 34px !important;
+    .ant-select-selection-search {
+      left: 6px !important;
+    }
+    .customAntDropdownTitleWithBG {
+      padding: 0 6px !important;
+    }
+  }
+  .ant-select-selection-item {
+    padding: 0 !important;
+    background: transparent;
+    border: none;
+    .ant-select-selection-item-remove {
+      position: absolute;
+      right: 0px;
+    }
+  }
+  &.bottom {
+    .ant-select {
+      position: absolute;
+      bottom: 0px;
+    }
+  }
+  &.isMutiple {
+    .ant-select-selector {
+      padding: 3px 6px 0px !important;
+      align-items: normal;
+    }
+
+    .ant-select-selection-search-input {
+      margin-top: -4px;
+    }
+
+    .ant-select-selection-item-content > span {
+      padding-right: 24px !important;
+    }
+    .ant-select-selection-item-remove {
+      right: 14px;
+      svg {
+        color: rgba(255, 255, 255, 0.7);
+      }
+      &:hover {
+        svg {
+          color: rgba(255, 255, 255, 1);
+        }
+      }
+    }
+  }
+  &.error {
+    .ant-select-selector {
+      border-radius: 0px !important;
+      box-shadow: inset 0 0 0 2px #f44336 !important;
+    }
+    &.ignoreErrorMessage .ant-select-selector {
+      box-shadow: inset 0 0 0 2px #ff933e !important;
+    }
+  }
+  &:hover {
+    .hoverShow {
+      display: inline-block;
+    }
+  }
+}
+
+// 日期选择控件
+.cell.cellControlDatePicker:not(.cellControlErrorStatus) {
+  box-shadow: inset 0 0 0 2px #2d7ff9 !important;
+}
+.cell.cellControlDatePicker {
+  padding: 2px !important;
+  padding-right: 2px !important;
+  .cellControlDatePickerCon {
+    .ant-picker {
+      height: auto;
+      padding: 5px 4px;
+      border: none;
+      box-shadow: none;
+      background: transparent;
+      .ant-picker-suffix {
+        display: none;
+      }
+      .ant-picker-input {
+        background: #fff;
+        height: auto !important;
+      }
+      .ant-picker-input input {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+.userSelectNone {
+  user-select: none;
+}
+
+.cellControlEdittingStatus {
+  box-shadow: inset 0 0 0 2px #2d7ff9 !important;
+}
+
+.cellControlErrorStatus {
+  box-shadow: inset 0 0 0 2px #f44336 !important;
+  &.ignoreErrorMessage {
+    box-shadow: inset 0 0 0 2px #ff933e !important;
+  }
+}
+
+.cell.cellControlErrorStatus:not(.isediting):not(.focus) {
+  box-shadow: none !important;
+  background-color: #fff0f1 !important;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border: 4px solid #f44336;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+  }
+  &.row-0:hover {
+    &::before {
+      top: auto;
+      bottom: 0;
+      border-bottom-color: #f44336;
+      border-top-color: transparent;
+    }
+  }
+}
+
+.subList {
+  .cell.cellControlErrorStatus:not(.isediting) {
+    box-shadow: unset !important;
+    background-color: rgba(244, 67, 54, 0.08) !important;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 3px solid transparent;
+      border-left-color: #f44336;
+      border-top-color: #f44336;
+    }
+  }
+}
+
+.editableCellCon.cell.masked {
+  > span,
+  > div {
+    cursor: pointer;
+    &:hover {
+      color: #1d5786;
+    }
+  }
+}
+
+.sheetViewTable {
+  .cell.focus.editable {
+    .guideText {
+      font-size: 13px;
+      display: inline-block !important;
+    }
+  }
+}
+
+.workSheetTextCell {
+  &.empty {
+    text-align: left !important;
+  }
+}
+
+.editableCellCon.maskHoverTheme {
+  cursor: pointer;
+  &:hover {
+    color: #1d5786;
+    i.icon-eye_off {
+      color: #9e9e9e !important;
+    }
+  }
+}
+
+.editableCellCon.showAsText {
+  padding: 0 6px !important;
+}

@@ -1,0 +1,92 @@
+@mainColor: #1677ff;
+.netStateWrap {
+  .imgWrap {
+    height: 200px;
+    background: url('./upgrade.png') center center no-repeat;
+    background-size: cover;
+  }
+  .hint {
+    margin: 32px 24px 10px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .explain {
+    margin: 0 24px;
+    max-width: 600px;
+    font-size: 14px;
+    text-align: center;
+  }
+  .operationWrap {
+    margin: 24px auto 20px auto;
+    .operationBtn {
+      box-sizing: border-box;
+      border-radius: 20px;
+      width: 240px;
+      margin: 0 auto;
+      margin-bottom: 16px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      color: #fff;
+      font-size: 14px;
+      background-color: @mainColor;
+      cursor: pointer;
+      &:hover {
+        background-color: darken(@mainColor, 10%);
+      }
+      &.topLevel {
+        background-color: #fff;
+        color: @mainColor;
+        border: 2px solid @mainColor;
+        &:hover {
+          color: darken(@mainColor, 10%);
+          border-color: darken(@mainColor, 10%);
+        }
+      }
+    }
+  }
+  .operationText {
+    color: @mainColor;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+  }
+}
+.upgradeVersionDialogBtn {
+  .ming.Button.Button--primary {
+    display: block;
+    box-sizing: border-box;
+    border-radius: 20px;
+    width: 240px !important;
+    margin: 0 auto;
+    margin-bottom: 16px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    background-color: #1677ff !important;
+    cursor: pointer;
+    &:hover {
+      background-color: darken(#1677ff, 10%) !important;
+    }
+  }
+}
+.upgradeWrap {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .payUpgradeBtn {
+    margin-top: 48px;
+    border-radius: 20px !important;
+    width: 240px !important;
+    height: 40px;
+    line-height: 40px !important;
+    background-color: #1677ff !important;
+  }
+}
