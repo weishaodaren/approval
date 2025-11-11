@@ -5,11 +5,16 @@ import todoEmpty from 'staticfiles/images/todolist.png';
 import styled from 'styled-components';
 import { Icon, LoadDiv } from 'ming-ui';
 import instanceVersionApi from 'src/pages/workflow/api/instanceVersion';
+import Approvals from 'src/pages/workflow/Approvals';
+import { getStateParam } from 'src/pages/workflow/Approvals';
+import { TABS } from 'src/pages/workflow/Approvals/config';
+import { getTodoCount } from 'src/pages/workflow/Approvals/Entry';
 import ExecDialog from 'src/pages/workflow/components/ExecDialog';
-import MyProcess from 'src/pages/workflow/MyProcess';
-import { getStateParam } from 'src/pages/workflow/MyProcess';
-import { TABS } from 'src/pages/workflow/MyProcess/config';
-import { getTodoCount } from 'src/pages/workflow/MyProcess/Entry';
+
+// import MyProcess from 'src/pages/workflow/MyProcess';
+// import { getStateParam } from 'src/pages/workflow/MyProcess';
+// import { TABS } from 'src/pages/workflow/MyProcess/config';
+// import { getTodoCount } from 'src/pages/workflow/MyProcess/Entry';
 
 const Wrapper = styled.div`
   height: 100%;
@@ -260,6 +265,8 @@ export default function Process(props) {
       ...getStateParam(currentTab),
     };
     instanceVersionApi.getTodoList(params).then(res => {
+      console.log(`获取流程待办`, res);
+
       if (res) {
         setTodoList(res);
         setTodoLoading(false);
@@ -437,7 +444,7 @@ export default function Process(props) {
           <div className="cardTitle">
             <div className="titleText">
               {currentTheme.processIcon && <img src={currentTheme.processIcon} />}
-              {_l('流程待办')}
+              {_l('审批中心')}
             </div>
             <div className="flex"></div>
             {!displayComplete && (
@@ -471,7 +478,7 @@ export default function Process(props) {
       )}
 
       {myProcess.visible && (
-        <MyProcess
+        <Approvals
           countData={countData}
           activeTab={myProcess.activeTab}
           onCancel={() => {
