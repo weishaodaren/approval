@@ -22,8 +22,16 @@ export default class Card extends Component {
   }
   renderHeader() {
     const { stateTab, item, showApproveChecked = true } = this.props;
-    const { flowNode, workItem, flowNodeType, currentWorkFlowNodes, completeDate, instanceLog, status } = item;
-    console.log(`RenderHeader:`, item);
+    const {
+      flowNode,
+      workItem,
+      flowNodeType,
+      currentWorkFlowNodes,
+      completeDate,
+      instanceLog,
+      status,
+      platformId = '',
+    } = item;
 
     let RenderState = null;
     let RenderRightHander = null;
@@ -177,6 +185,7 @@ export default class Card extends Component {
           {!alreadyDisposeOrExamine && this.renderTimeConsuming()}
           {this.renderSurplusTime()}
         </div>
+        {platformId && <div className="platformId">{platformId}</div>}
         <div className="Red">{RenderRightHander}</div>
       </div>
     );
@@ -198,7 +207,6 @@ export default class Card extends Component {
               size={22}
               appId={app.id}
               chatButton={false}
-              disabled
             />
             <span className="fullName Font13 pLeft5 pRight10">{createAccount.fullName}</span>
           </div>

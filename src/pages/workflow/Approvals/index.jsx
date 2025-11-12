@@ -295,7 +295,8 @@ export default class MyProcess extends Component {
         isMore: result.length === pageSize,
       });
       // this.getBPMTodoList();
-      this.getBPMHistoryList();
+      // this.getBPMHistoryList();
+      this.getTodoList2();
     });
   };
 
@@ -355,6 +356,31 @@ export default class MyProcess extends Component {
       loading: false,
       pageIndex: result.data.CurrentPage,
       isMore: result.data.TaskList.length === result.data.PageSize,
+    });
+  };
+
+  // 获取待办事项
+  getTodoList2 = async () => {
+    // const accessToken = await this.getAccessToken();
+    const resp = await fetch(`${API.GET_TODO_LIST}?page=1&limit=100`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        // Authorization: accessToken,
+      },
+    });
+    if (!resp.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const result = await resp.json();
+    console.log('result=============', result);
+
+    this.setState({
+      list: this.state.list.concat(result.data),
+      isLoading: false,
+      loading: false,
+      // pageIndex: result.data.CurrentPage,
+      // isMore: result.data.length === result.data.PageSize,
     });
   };
 

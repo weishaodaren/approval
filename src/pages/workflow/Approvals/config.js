@@ -200,4 +200,5 @@ export const API = {
   GET_ACCESS_TOKEN: 'http://localhost:3000/api/auth/sso-token', // 获取第三方应用访问token
   GET_TASK_LIST: 'http://localhost:3000/api/workflow/task-list', // 获取第三方应用待办任务列表
   GET_HISTORY_LIST: 'http://localhost:3000/api/workflow/history-task-list', // 获取第三方应用历史任务列表
+  GET_TODO_LIST: 'http://localhost:3000/api/workflow/instance/getTodoList', // 获取待办列表
 };
