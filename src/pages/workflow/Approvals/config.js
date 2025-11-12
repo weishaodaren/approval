@@ -201,4 +201,5 @@ export const API = {
   GET_TASK_LIST: 'http://localhost:3000/api/workflow/task-list', // 获取第三方应用待办任务列表
   GET_HISTORY_LIST: 'http://localhost:3000/api/workflow/history-task-list', // 获取第三方应用历史任务列表
   GET_TODO_LIST: 'http://localhost:3000/api/workflow/instance/getTodoList', // 获取待办列表
+  SYNC_TODO_LIST: 'http://localhost:3000/api/workflow/hap-task', // 同步待办列表
 };

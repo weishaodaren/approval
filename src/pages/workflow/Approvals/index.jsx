@@ -287,6 +287,7 @@ export default class MyProcess extends Component {
     }
 
     this.request.then(result => {
+      // this.syncTodoList(result);
       this.setState({
         list: list.concat(result),
         isLoading: false,
@@ -382,6 +383,24 @@ export default class MyProcess extends Component {
       // pageIndex: result.data.CurrentPage,
       // isMore: result.data.length === result.data.PageSize,
     });
+  };
+
+  // 同步待办事项
+  syncTodoList = async data => {
+    // const accessToken = await this.getAccessToken();
+    const resp = await fetch(API.SYNC_TODO_LIST, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        // Authorization: accessToken,
+      },
+      body: JSON.stringify(data),
+    });
+    if (!resp.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const result = await resp.json();
+    console.log('同步=====', result);
   };
 
   handleChangeTab = tab => {
